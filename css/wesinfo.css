@@ -243,10 +243,8 @@ a:hover {
 
   span.right{
     position: relative;
-right: -2%;
+    right: -2%;
     /* width: 25%; */
-
-
     padding: 1em 0em;
   }
 
@@ -987,5 +985,5 @@ left:-8%
 /* sharepoint */
 
 /* #O365_NavHeader {
-  display:none;
+display:none;
 } */

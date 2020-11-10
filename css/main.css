@@ -7,6 +7,117 @@ main {
 
 }
 
+h2.darkBlue{
+  font-size:30px;
+  border-bottom:2px solid #22BBAD
+}
+
+.largeBullets2 li {
+  list-style: none;
+  margin:.5em 0em;
+}
+
+.largeBullets2 li:before {
+
+  display: block;
+  position: relative;
+  max-width: 0px;
+  max-height: 0px;
+  left: -14px;
+  top: 0px;
+  color: #2fbaad;
+  font-size: 30px;
+  content: "\f0da";
+  font-family: "Font Awesome 5 Pro";
+
+font-weight: bold;
+display: inline-block;
+width: 1em;
+font-size: 14px;
+margin-left: 0em;
+
+}
+
+.aquaCaret:before {
+  display: block;
+  position: relative;
+  max-width: 0px;
+  max-height: 0px;
+  left: -14px;
+  top: 0px;
+  color: #2fbaad;
+  font-size: 30px;
+  content: "\f0da";
+  font-family: "Font Awesome 5 Pro";
+
+font-weight: bold;
+display: inline-block;
+width: 1em;
+font-size: 14px;
+margin-left: 2em;
+}
+
+ul ul {
+  list-style-type: disc;
+}
+
+.bgi-wrapper {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.main-wrapper {
+    /* padding: 3em 2em; */
+    padding: .8em 1em 6em 1em;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(179.52deg, rgba(255, 255, 255, 0.05) 0.19%, rgba(34, 187, 173, 0.05) 46.97%, rgba(8, 100, 143, 0.05) 99.12%);
+    position:relative;
+    overflow:visible;
+  }
+
+  .rel {
+      position: relative;
+      z-index: 999;
+  }
+
+  .bottom-pic {
+    background-image:url('../images/bottom-2.svg');
+    background-repeat:no-repeat;
+    width:100%;
+    height:7em;
+    position: relative;
+  }
+
+  .bgi-wrapper{
+    background-image:url('../images/Group.png');
+    background-repeat:no-repeat;
+    width:100%;
+    height:34em;
+    position: absolute;
+    left:0
+  }
+
+  .topImage{
+    position: absolute;
+    width:100%;
+    height:7em;
+    background: linear-gradient(89.28deg, rgba(0, 70, 127, 0.9) -0.84%, rgba(14, 123, 155, 0.85) 60.05%, rgba(14, 123, 155, 0.6) 99.67%); 
+  }
+
+  li {
+    margin: .5em 0em;
+  }
+
+  .whiteBox .aqua.bold{
+    margin-bottom:.5em
+  }
+
+  .whiteBox p{
+    margin-bottom:.5em
+  }
+
 .carousel {
   min-height: 200px;
   margin-bottom: 0px;

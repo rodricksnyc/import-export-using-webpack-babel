@@ -118,6 +118,8 @@ a:hover {
     padding-top:0px;
     padding-bottom:0px;
     padding-right:0px;
+    height: 75px;
+
   }
 
   .navbar-brand {
@@ -367,7 +369,7 @@ a:hover {
     align-items: center;
     /* max-width: 102px; */
     text-align: center;
-
+    height: 75px;
 
   }
 

@@ -157,7 +157,8 @@ li {
 }
 
 .whiteBox p{
-  margin-bottom:.5em
+  margin-bottom:.5em;
+
 }
 
 .carousel {
@@ -239,14 +240,20 @@ min-height:4em
     align-items: center;
 
 }
+
+
+
+
+
 .panel-body .nav.navbar-nav{
   margin-left: 0em;
-  margin-top: 2em;
+  margin-top: 1.5em;
 
 }
 
 .aquaBackground .panel-collapse a {
   color: #0E7B9B;
+  width:150px
 }
 .borderShow{
 position:absolute;
@@ -259,7 +266,7 @@ display: none
 }
 
 .aquaBackground{
-  background: #F2FFFE !important
+  background: #EFFCFB !important
 }
 
 .author {
@@ -425,7 +432,8 @@ display: none
 }
 
 .whiteBubble p {
-  margin-bottom:0em
+  margin-bottom:0em;
+      line-height: 1;
 }
 
 .darkBlue{
@@ -793,6 +801,74 @@ p.darkBlue {
 }
 
 
+@media (min-width:991px) and (max-width:1320px){
+  .paddingLeft3{
+    padding-left: 1em
+  }
+
+  .leftSideNav{
+    flex: 0 0 20;
+    max-width: 20%;
+
+  }
+
+  .middleNav {
+
+    flex: 0 0 55%;
+    max-width: 55%;
+}
+}
+
+
+
+@media (max-width:1024px){
+.bottom-pic .white.first {
+
+    left: calc(50% - 15em);
+
+}
+
+}
+
+@media (max-width:1024px) and (min-width:991px){
+.word-break {
+
+    word-break: break-all;
+}
+
+}
+
+@media (max-width:991px){
+  .middleNav{
+    padding-left: 2em;
+    padding-top: 2em;
+
+  }
+
+  .bottom-pic .white.first {
+
+    top: 25%;
+    font-size: 1.4em;
+
+}
+
+.bottom-pic .white.second {
+
+    font-size: 1.5em;
+
+}
+
+  .rightSideNav{
+      padding-left: 2em;
+  }
+}
+
+@media (min-width:1025px){
+  .paddingLeft3{
+    padding-left: 3em
+  }
+}
+
 
 @media (min-width: 992px) and (max-width:1450px){
   .popularR .col-lg-2 {
@@ -819,4 +895,26 @@ p.darkBlue {
   .ml1 {
     margin-left: 0em;
   }
+}
+
+@media (max-width:767px){
+  h2.darkBlue{
+    font-size:28px
+  }
+  .bottom-pic .white.second {
+    position: absolute;
+    z-index: 99;
+    left: calc(50% - 9em);
+    top: 43%;
+    font-size: 2.2em;
+    font-weight: 500;
+    right: calc(50% - 9em);
+    font-size: 1em;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.bottom-pic .white.first {
+  font-size: 1em;
+    left: calc(50% - 7em);
+}
 }

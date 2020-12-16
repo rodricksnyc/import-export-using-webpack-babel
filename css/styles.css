@@ -381,7 +381,7 @@ header {
 .bubble h3.teal{
   text-align:center;
   margin-top:1.4em;
-  color:#0e7b9b;
+  color:#0E7B9B;
   font-size:18px;
   font-weight:500;
   background: transparent
@@ -392,7 +392,7 @@ header {
 }
 
 .small {
-  color:#0e7b9b;
+  color:#0E7B9B;
   font-size:30px;
   font-weight:600;
   margin-bottom:0
@@ -400,7 +400,7 @@ header {
 }
 
 span.teal a{
-  color:#0e7b9b;
+  color:#0E7B9B;
   background: transparent;
   font-weight:600;
 }
@@ -424,7 +424,7 @@ hr.blue {
 }
 
 .tealBubble {
-  background: #0e7b9b;
+  background: #0E7B9B;
   font-weight:600;
   color: white;
   font-size: 18px;

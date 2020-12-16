@@ -1,13 +1,17 @@
 import 'core-js/stable'
 $(document).ready(function () {
-	$('.carousel').on('slid.bs.carousel', function () {
-		var carouselData = $(this).data('bs.carousel')
 
-		var currentIndex = $(this).find('.active').index()
-
-		$('.sliderBlock').removeClass('active-p').eq(currentIndex).addClass('active-p')
-	})
-
+	// 
+	// $('.carousel').on('slid.bs.carousel', function () {
+	// 	var carouselData = $(this).data('bs.carousel')
+	//
+	// 	var currentIndex = $(this).find('.active-p').index() + 1
+	//
+	// 	$('.sliderBlock').removeClass('active-p').eq(currentIndex).addClass('active-p')
+	// })
+	//
+	//
+	//
 
 
 	for (var j in block.blocks) {

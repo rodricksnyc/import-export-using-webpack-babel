@@ -1,6 +1,75 @@
 $(document).ready(function() {
 
 
+		// var Ip = 'https://ipinfo.io/json';
+		//
+		// $.getJSON(Ip, function(data) {
+		// 	var city = data.city;
+		// 	var region = data.region;
+		// 	var country = data.country;
+		//
+		//
+		// 	var proxy = 'https://cors-anywhere.herokuapp.com/';
+		//
+		// 	var URL = 'http://api.openweathermap.org/data/2.5/weather?id=4367175&appid=b2f2b923be22181ef89baa544605b888'
+		//
+		//
+		// 	$.getJSON(proxy + URL, function(data) {
+		// 		var type = data.weather[0].main;  //array 0 index
+		// 		var id = data.weather[0].id; //array 0 index
+		// 		var city = data.name;
+		//
+		// 		var tempCel = Math.round(data.main.temp - 273.15);
+		// 		var tempC = tempCel + '°C';
+		// 		var weather = data.weather[0].description;
+		// 		// var tempF = Math.round(tempCel * (9 / 5) + 32) +  "<p>" +  "&deg; F" + "</p>" ;
+		// 		var icon = data.weather[0].icon;
+		// 		var tempBool = true;
+		//
+		// 		//Output data to display on the page
+		// 		$('#city').text(city);
+		// 		$('#state').text(region);
+		// 		$("#temp").html("<p>" + Math.round(tempCel * (9 / 5) + 32) +  "&deg; F" + "</p>");
+		// 		var weatherIcon = 'http://openweathermap.org/img/w/' + icon + '.png';
+		// 		$('#wIcon').html('<img src=' + weatherIcon + '>');
+		//
+		//
+		// 	});
+		// });
+
+	$(document).keyup(function (e) {
+      if (e.keyCode == 16) {
+          if (e.originalEvent.location == 1)
+              console.log('Left SHIFT pressed.');
+          else
+              console.log('Right SHIFT pressed.');
+      }
+
+		else	if (e.keyCode == 17) {
+          if (e.originalEvent.location == 1)
+              console.log('Left CTRL pressed.');
+          else
+              console.log('Right CTRL pressed.');
+      }
+
+	else	if (e.keyCode == 18) {
+          if (e.originalEvent.location == 1) {
+              console.log('Left ALT pressed.');
+              $('#ms-designer-ribbon').toggleClass('hidden');
+
+				}
+          else {
+              console.log('Right ALT pressed.');
+              $('#ms-designer-ribbon').toggleClass('hidden');
+
+          e.preventDefault();
+
+				}
+      }
+});
+
+
+
 	if ($(window).width() >= 1199){
 
 		$(".navbar .dropdown-toggle").mouseenter(function () {
@@ -73,70 +142,32 @@ $(".stickyBar .rel .corresponding").mouseleave(function(){
 })
 
 
+$('.collapse').on('show.bs.collapse', function () {
 
-	// $(".stickyBar .rel").mouseenter(function () {
-	// 		$(this).addClass("showDiv");
-	//
-	//
-	// 		if($(this).hasClass('showDiv')) {
-	// 			$(this).find('.corresponding').show()
-	// 		}
-	//
-	//
-	// 	});
-	//
-	// 	$(".stickyBar .rel").mouseleave(function() {
-	// 		$(this).removeClass("showDiv");
-	// 		if(!$(this).hasClass('showDiv') ) {
-	// 			$(this).find('.corresponding').hide()
-	// 		}
-	//
-	// 	});
-	//
-	// 	$(".outer").mouseleave(function(){
-	//
-	// 		$(this).find('.corresponding').hide()
-	//
-	// 	});
+	$(this).closest('.sideBlock').addClass('aquaBackground')
 
+	$(this).closest('.sideBlock').find('.borderShow').show()
 
-
-
-	var Ip = 'https://ipinfo.io/json';
-
-	$.getJSON(Ip, function(data) {
-		var city = data.city;
-		var region = data.region;
-		var country = data.country;
-
-
-		var proxy = 'https://cors-anywhere.herokuapp.com/';
-
-		var URL = 'http://api.openweathermap.org/data/2.5/weather?id=4367175&appid=b2f2b923be22181ef89baa544605b888'
-
-
-		$.getJSON(proxy + URL, function(data) {
-			var type = data.weather[0].main;  //array 0 index
-			var id = data.weather[0].id; //array 0 index
-			var city = data.name;
-
-			var tempCel = Math.round(data.main.temp - 273.15);
-			var tempC = tempCel + '°C';
-			var weather = data.weather[0].description;
-			// var tempF = Math.round(tempCel * (9 / 5) + 32) +  "<p>" +  "&deg; F" + "</p>" ;
-			var icon = data.weather[0].icon;
-			var tempBool = true;
-
-			//Output data to display on the page
-			$('#city').text(city);
-			$('#state').text(region);
-			$("#temp").html("<p>" + Math.round(tempCel * (9 / 5) + 32) +  "&deg; F" + "</p>");
-			var weatherIcon = 'http://openweathermap.org/img/w/' + icon + '.png';
-			$('#wIcon').html('<img src=' + weatherIcon + '>');
-
-
-		});
+	$('a[href="#' + this.id + '"] .caret-down').css({
+		transform: "rotate(180deg)"
 	});
+
+});
+$('.collapse').on('hide.bs.collapse', function () {
+		$(this).closest('.sideBlock').find('.borderShow').hide()
+
+	$(this).closest('.sideBlock').removeClass('aquaBackground')
+
+	$('a[href="#' + this.id + '"] .caret-down').css({
+		transform: "rotate(0deg)"
+	});
+
+});
+
+
+
+
+
 
 	//508 tabbing
 

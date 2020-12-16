@@ -269,6 +269,16 @@ display: none
   background: #EFFCFB !important
 }
 
+.capsule{
+  background: #0E7B9B;
+  padding:1em
+}
+.tealShapes{
+  display: flex;
+  justify-content: space-evenly
+}
+
+
 .author {
   padding-bottom: 20px;
   margin-top: 50px;

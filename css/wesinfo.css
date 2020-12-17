@@ -33,7 +33,13 @@ body {
 }
 
 .fa-file-pdf {
-  color:#D60A00
+  color:#D60A00 !important
+}
+
+
+.stickyBar .fa-file-pdf {
+    color: white;
+    font-size: 16px;
 }
 
 .indentLeft{
@@ -50,8 +56,8 @@ body {
   min-height: 100;
   position: relative;
   padding-bottom: 120px;
-
-  min-height: calc(100vh - 10rem);
+/*
+  min-height: calc(100vh - 10rem); */
   position: relative;
 }
 footer {
@@ -467,6 +473,12 @@ i.fa-search.allResults {
   opacity: 0;
   transition: visibility 0s, opacity 0.3s linear;
 
+}
+
+.dropdown-menu .nav-item{
+  height:auto;
+  max-height:2em;
+  width:100%;
 }
 
 .dropdown-menu  .text-uppercase {

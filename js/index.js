@@ -165,6 +165,24 @@ $('.collapse').on('hide.bs.collapse', function () {
 });
 
 
+var pathMobile = window.location.href
+
+$('.side-menu-container .navbar-nav  a').each(function() {
+	if (this.href === pathMobile) {
+		$(this).closest('li').addClass('active');
+	}
+	else {
+		$(this).closest('li').removeClass('active');
+	}
+
+	if ($('li.active').parent().parent().hasClass('panel-body')){
+		$('li.active').closest('.panel-collapse').addClass('show')
+		$('li.active').closest('.sideBlock').addClass('aquaBackground')
+ 		$('li.active').closest('.sideBlock').find('.borderShow').show()
+
+	}
+
+});
 
 
 

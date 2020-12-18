@@ -186,6 +186,27 @@ li {
 
 }
 
+.whiteTitleBox{
+  position: absolute;
+  background: white;
+  top:0;
+  left:0;
+  right:0;
+
+  height: auto;
+  padding: .1em .1em .1em .4em;
+}
+
+.whiteTitleBox p{
+  color:black;
+  font-size:14px;
+  font-weight:600
+}
+
+.sliderBlock:first-child p.darkBlue{
+  padding-top:.3em
+}
+
 .sideBlock.active{
   background: #138AAD !important;
   width: 107% !important;
@@ -374,7 +395,7 @@ left: -12px;
 .sliderBlock {
   background: #EEF8FF;
   height:25%;
-  padding: 1.5em .5em 1em 1.2em;
+  padding: 1.5em 1em 1em 1.5em;
   position: relative;
   -webkit-box-shadow: 0px 14px 43px -11px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 14px 43px -11px rgba(0,0,0,0.4);
@@ -558,9 +579,44 @@ left: -12px;
 .dateBlock {
   height:4rem;
   width:4rem;
-
-  background: pink;
   margin-right:1em;
+  border-radius: 1rem;
+  padding-top:.75em
+}
+
+.dateBlock.green{
+  background: #99CD78
+}
+
+.greenColor{
+  color:#20851E
+}
+
+.dateBlock.blue{
+  background:#59CAEE !important
+}
+
+.across:last-child{
+  border-bottom:none
+}
+
+.spotlightName .description{
+  max-width:85%;
+  line-height: 1
+}
+
+
+.dateBlock.purple{
+  background: #D6BEEA !important
+}
+
+.description .pruple{
+  color:#855FA5
+}
+
+
+.description p{
+line-height:1
 }
 
 .bold{
@@ -586,6 +642,23 @@ p.darkBlue {
 
 .blue {
   color: #00467f;
+}
+
+.day{
+  color:black;
+  margin:0 !important;
+  font-size:22px;
+  font-weight:600;
+  line-height: 1;
+
+}
+
+.month{
+  color:black;
+  margin:0 !important;
+  font-size:18px;
+  line-height: 1;
+
 }
 
 .employeeImg {
@@ -622,7 +695,7 @@ p.darkBlue {
 
 .light{
   color:#0E7B9B;
-  font-weight:300;
+  font-weight:400;
 }
 
 .nav-item {

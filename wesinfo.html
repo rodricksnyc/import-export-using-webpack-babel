@@ -414,7 +414,7 @@
 					<li class="nav-item">
 						<a class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0" role="button">
 							<!-- <button class="user"> -->
-								<p class="smaller name user">John Doe</p>
+								<p class="smaller name user">Elizabeth Rodricks</p>
 							<!-- </button> -->
 
 						</a>
@@ -532,6 +532,7 @@
 
 								<div class="carousel-inner" role="listbox">
 
+
 									<div class="carousel-item active">
 										<img src="https://cdn.pixabay.com/photo/2020/08/08/20/19/wave-5473869_960_720.jpg">
 										<div class="carousel-item-content">
@@ -579,6 +580,7 @@
 						<div class="col-sm-4 padding-0">
 							<div class="result">
 								<div class="sliderBlock active-p">
+									<div class="whiteTitleBox"><p>Featured News</p></div>
 									<p class="darkBlue bold">Get to Know Wesinfo</p>
 									<p data-target="#carousel-example-generic" data-slide-to="0">Learn about the exciting changes to Wesinfo</p>
 								</div>
@@ -694,6 +696,7 @@
 											<div class="across">
 												<div class="dateBlock"></div>
 												<div class="description d-flex flex-column">
+
 													<p class="gray small">12PM–1PM, WB 100</p>
 													<p class="blue">Network Login Changes: Modern Authorization Enabled</p>
 
@@ -847,32 +850,48 @@
 						</div>
 						<div class="vertical">
 							<div class="across">
-								<div class="dateBlock"></div>
+								<div class="dateBlock green d-flex flex-column align-items-center">
+									<p class="day">21</p>
+									<p class="month">JAN</p>
+
+								</div>
 								<div class="description d-flex flex-column">
-									<p class="aqua bold">Administrative Assistants Brown Bag</p>
+									<p class="aqua bold">Healthy Eating Around the Holidays Webinar</p>
+									<p class="greenColor small">Administrative Assistants Brown Bag</p>
 									<p class="gray small">12PM–1PM, WB 100</p>
 								</div>
 
 							</div>
 
 							<div class="across">
-								<div class="dateBlock"></div>
+
+								<div class="dateBlock blue d-flex flex-column align-items-center">
+									<p class="day">21</p>
+									<p class="month">JAN</p>
+
+								</div>
 								<div class="description d-flex flex-column">
-									<p class="aqua bold">Administrative Assistants Brown Bag</p>
+									<p class="aqua bold">Administrative Assistants Brown Bag </p>
+									<p class="darkBlue small">Corporate</p>
 									<p class="gray small">12PM–1PM, WB 100</p>
 								</div>
 
 							</div>
 
 							<div class="across">
-								<div class="dateBlock"></div>
+
+								<div class="dateBlock purple d-flex flex-column align-items-center">
+									<p class="day">21</p>
+									<p class="month">JAN</p>
+
+								</div>
 								<div class="description d-flex flex-column">
-									<p class="aqua bold">Administrative Assistants Brown Bag</p>
+									<p class="aqua bold">Pros and Cons of Zoom, Teams, and Webex for Distance Training</p>
+									<p class="purple small">Training & Seminars</p>
 									<p class="gray small">12PM–1PM, WB 100</p>
 								</div>
 
 							</div>
-
 
 						</div>
 
@@ -883,7 +902,11 @@
 						<p class="darkBlue bold">Employee Spotlight</p>
 						<div class="d-flex justify-content-between align-items-start">
 							<img src="https://media.istockphoto.com/photos/professionalism-and-dedication-that-makes-a-difference-picture-id862596620?b=1&k=6&m=862596620&s=170667a&w=0&h=t8wo2owmwMQrx4K5g_VstPvluYaYdzLWN6WMCvf2Vas=" class="img-fluid employeeImg">
-							<p class="description">Jane Doe, statistician, really likes this and is excellent at this. Highlight about work that he has done recently that’s pretty cool.</p>
+							<div class="spotlightName d-flex flex-column">
+							<p class="description strong">Guy Smith</p>
+							<p class="description">As part of the Marketing & Public Relations team, Kelly focuses on Westat’s social media strategy, approach...</p>
+
+						</div>
 
 						</div>
 						<p class="aqua bold text-center">See More</p>
@@ -1211,7 +1234,7 @@ var currentIndex = $('div.active').index() + 1;
 $('.carousel').on('slid.bs.carousel', function () {
 	var carouselData = $(this).data('bs.carousel')
 
-    currentIndex = $('div.active').index() 
+    currentIndex = $('div.active').index()
 
 	$('.sliderBlock').removeClass('active-p').eq(currentIndex).addClass('active-p')
 })

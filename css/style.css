@@ -2535,7 +2535,7 @@ li {
 }
 
 .row .whiteBox p.aqua.bold{
-  margin-bottom:.5em !important;
+  /* margin-bottom:.5em !important; */
   font-weight: 500;
 }
 
@@ -2794,7 +2794,7 @@ li {
 }
 
 .row .whiteBox.mr1 p.aqua.bold {
-  margin-bottom: .5em !important;
+  /* margin-bottom: .5em !important; */
   font-weight: 500;
   font-size: 16px !important;
 }
@@ -3896,7 +3896,7 @@ tr.odd {
   padding: 1em 0em;
 }
 
-.whiteBox .grayBottom .aqua.bold {
+.grayBottom .aqua.bold {
   margin-bottom: 0 !important;
   line-height: 1;
   margin-right: 15%;
@@ -4618,6 +4618,11 @@ p.darkBlue {
     margin-bottom: 1rem;
     margin-top: -1.4em;
   }
+
+  .directory .form-group {
+    margin-bottom: 1rem;
+    margin-top: 0em;
+}
 
   .popularR {
     padding-left: 1%;

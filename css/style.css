@@ -2314,7 +2314,7 @@ li {
 }
 
 .sliderBlock:first-child p.darkBlue{
-  padding-top:.3em
+  padding-top:.6em
 }
 
 .sideBlock.active{
@@ -2442,9 +2442,9 @@ h1.darkBlue{
 
 .row p.blueFont {
   color: #00467f;
-  font-size: 20px !important;
+  /* font-size: 20px; */
   font-weight: 600;
-  margin: 0 0 10px !important;
+  margin: 0 0 10px;
 }
 
 .row p a {
@@ -2456,9 +2456,10 @@ h1.darkBlue{
   font-size: 17px !important;
 
 }
-
-
-
+p.darkBlue {
+    color: #00467f !important;
+    font-size: 20px !important;
+}
 
 .row li {
   font-size:18px !important
@@ -2525,9 +2526,6 @@ ul ul {
   z-index: 999;
 }
 
-
-
-
 li {
   margin: .5em 0em;
 }
@@ -2571,11 +2569,11 @@ li {
 }
 
 
-.description  p {
+/* .description  p {
   margin-top: 0 !important;
   margin-bottom: 0rem !important;
   font-size: 15px !important;
-}
+} */
 
 .author {
   padding-bottom: 20px;
@@ -2801,7 +2799,7 @@ li {
   font-size: 16px !important;
 }
 
-.col-lg-9 .whiteBox.mr1 p {
+ .whiteBox.mr1 p {
   margin-top: 0 !important;
   margin-bottom: 1rem !important;
   font-size: 16px !important;
@@ -2926,12 +2924,12 @@ li {
   opacity: 1;
 }
 
-.smallBubble p {
+/* .smallBubble p {
   margin-bottom:0em !important;
   line-height: 1.1 !important;
   font-size: 17px !important;
 
-}
+} */
 
 .nav-tabs li {
   margin: 0em 0em;
@@ -2942,26 +2940,7 @@ li {
   flex-wrap:wrap
 }
 
-.smallBubble {
-  background: #BCF8F1;
-  position: relative;
-  border-radius: 20px;
-  padding: 3em 1em;
-  margin-bottom: 1em;
-  text-align: center;
-  -webkit-box-shadow: 0px 0px 15px 2px rgba(191,210,223,1);
-  -moz-box-shadow: 0px 0px 15px 2px rgba(191,210,223,1);
-  box-shadow: 0px 0px 14px 2px rgba(191,210,223,1);
-  min-height: 10em;
-  padding: 4em 1em 2em 1em;
-}
 
-.smallBubble i {
-  font-size:24px;
-  margin-top:-.6em;
-  margin-bottom:.3em;
-  color: #00467f;
-}
 
 .carousel .carousel-indicators li {
   background-color: black;
@@ -3337,17 +3316,17 @@ td {
   font-size:16px
 }
 
-.whiteBox p {
+/* .whiteBox p {
   margin-top: 0 !important;
   margin-bottom: 1rem !important;
   font-size: 16px !important;
-}
+} */
 
-.col-lg-9 p {
+/* .col-lg-9 p {
   margin-top: 0 !important;
   margin-bottom: 1rem !important;
   font-size: 17px !important;
-}
+} */
 
 
 .description .col-lg-9 p {

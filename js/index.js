@@ -128,6 +128,8 @@ $(document).ready(function() {
 		$('.form-check-input').attr('tabindex', '-1');
 		$('#slideOut2 .modal-header a').attr('tabindex', '-1')
 
+			$("#one, #two").removeClass('blueTab');
+
 	}
 
 	$('#close').keypress(

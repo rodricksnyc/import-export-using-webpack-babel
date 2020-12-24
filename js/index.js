@@ -1,5 +1,163 @@
 $(document).ready(function() {
 
+	$('#slideOut2 .modal-header a').attr('tabindex', '-1')
+
+	var open = function() {
+
+	$('.changeTitle').html('We value your feedback!')
+		$('.contactUsOverlay').show();
+
+		$('#theform input').each(function () {
+			$(this).attr('tabindex', '0');
+		});
+		$('.radio-inline input').each(function () {
+			$(this).attr('tabindex', '0');
+		});
+
+		$('#slideOut2 .modal-header a').attr('tabindex', '0')
+
+		$('.form-check-input').attr('tabindex', '0');
+
+		$('.form-control').attr('tabindex', '0');
+
+		$('#closeThisPlease').attr('tabindex', '0');
+
+		$('#sendMessage').attr('tabindex', '0');
+
+		$('.modal-content').addClass('opened')
+		$("#slideOut2").addClass('showslideOut2');
+		$("#one").addClass('blueTab');
+		$("#two").removeClass('blueTab');
+
+
+				$('.firstBlock').addClass('hide1').fadeOut()
+				$('.secondBlock').removeClass('hide1').fadeIn()
+
+		setTimeout(function() {
+			$('body').addClass('showContact')
+		}, 300)
+
+	}
+	$('#one').keypress(
+		open
+
+	).click(
+		open
+	);
+
+
+
+
+	var open2 = function() {
+
+		$('.changeTitle').html('Need Help?')
+		$('.contactUsOverlay').show();
+
+		$('#theform input').each(function () {
+			$(this).attr('tabindex', '0');
+		});
+		$('.radio-inline input').each(function () {
+			$(this).attr('tabindex', '0');
+		});
+
+		$('#slideOut2 .modal-header a').attr('tabindex', '0')
+
+		$('.form-check-input').attr('tabindex', '0');
+
+		$('.form-control').attr('tabindex', '0');
+
+		$('#closeThisPlease').attr('tabindex', '0');
+
+		$('#sendMessage').attr('tabindex', '0');
+
+		$('.modal-content').addClass('opened')
+		$("#slideOut2").addClass('showslideOut2');
+		$("#two").addClass('blueTab');
+		$("#one").removeClass('blueTab');
+
+		$('.firstBlock').removeClass('hide1').fadeIn()
+		$('.secondBlock').addClass('hide1').fadeOut()
+
+		setTimeout(function() {
+			$('body').addClass('showContact')
+		}, 300)
+
+	}
+	$('#two').keypress(
+		open2
+
+	).click(
+		open2
+	);
+
+
+
+
+	$('.contactUsOverlay').on('click', function(e) {
+
+		if($('body').hasClass('showContact')) {
+
+				console.log("eriugbierib")
+
+			$('#slideOut2 .form-control').attr('tabindex', '-1');
+
+			$('#slideOut2 .modal-header a').attr('tabindex', '-1')
+
+			$('#closeThisPlease').attr('tabindex', '-1');
+
+			$('#sendMessage').attr('tabindex', '-1');
+			$('.form-check-input').attr('tabindex', '-1');
+
+			$("#slideOut2").removeClass('showslideOut2');
+			$('.contactUsOverlay').hide();
+
+			setTimeout(function() {
+				$('body').removeClass('showContact')
+			}, 300)
+
+		}
+	})
+
+
+	var close = function() {
+		$('.contactUsOverlay').hide();
+		$('#slideOut2 .form-control').attr('tabindex', '-1');
+		$('#closeThisPlease').attr('tabindex', '-1');
+		$('#sendMessage').attr('tabindex', '-1');
+		$("#slideOut2").removeClass('showslideOut2');
+		$('.form-check-input').attr('tabindex', '-1');
+		$('#slideOut2 .modal-header a').attr('tabindex', '-1')
+
+	}
+
+	$('#close').keypress(
+		close
+
+	).click(
+		close
+	);
+
+
+	$("#closeThisPlease").on("keyup", function (e) {
+		var code = (e.keyCode ? e.keyCode : e.which);
+		if (code == 13) {
+
+			$('#one').focus().css('outline', 'dashed 3px #4599ff')
+		}
+
+	})
+
+
+
+  $('.textArea').keydown(function (event) {
+    $('#sendMessage .buttonOverlay').remove()
+
+  });
+	$('.textArea2').keydown(function (event) {
+    $('#sendMessage2 .buttonOverlay').remove()
+
+  });
+
 
 		var Ip = 'https://ipinfo.io/json';
 
@@ -263,6 +421,10 @@ for (var i = 0, l = elements.length; i < l; i++) {
 
 $('b[role="presentation"]').hide();
 $('.select2-selection__arrow').append('<i class="fa fa-angle-down"></i>');
+
+
+
+
 
 
 

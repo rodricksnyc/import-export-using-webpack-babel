@@ -3597,7 +3597,21 @@ tr.odd {
   transform: scaleY(1.1);
   background-color: #03617E;
   z-index:99;
-  opacity:.75
+  opacity:.75;
+  padding:1em 0em 0em 1em
+}
+
+.carousel-item-overlay p.white.strong{
+  font-size:17px;
+  font-weight:600;
+  width:80%;
+}
+
+.carousel-item-overlay p.white{
+  font-size:14px;
+  font-weight:400;
+  line-height: 1;
+  width:80%;
 }
 
 .highlight-item {

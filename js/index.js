@@ -161,6 +161,34 @@ $(document).ready(function() {
   });
 
 
+$('.slideOutTab').on('mouseenter', function() {
+	if (!$('#slideOut2').hasClass('showslideOut2')) {
+	$('#one, #two').animate({
+			'right': "138px"
+		}, 200, function() {
+
+		});
+
+		$('#one').addClass('hoverColor1')
+		$('#two').addClass('hoverColor2')
+
+	}
+
+	})
+
+	$('.slideOutTab').on('mouseleave', function() {
+		$('#one, #two').animate({
+				'right': "45px"
+			}, 200, function() {
+
+			});
+
+			$('#one').removeClass('hoverColor1')
+			$('#two').removeClass('hoverColor2')
+
+		})
+
+
 
 
 		// var Ip = 'https://ipinfo.io/json';

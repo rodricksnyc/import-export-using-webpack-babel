@@ -3609,7 +3609,7 @@ a.icon strong {
   transform: scaleY(1.1);
   background-color: #03617E;
   z-index:99;
-  opacity:.75;
+  opacity:.85;
   padding:1em 0em 0em 1em
 }
 
@@ -4465,7 +4465,7 @@ opacity:1;
   left:0;
   right:0;
   background: #08648F;
-  opacity:.75;
+  opacity:.88;
   height: 60px;
   z-index: 0;
 }

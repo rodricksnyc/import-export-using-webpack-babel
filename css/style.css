@@ -1765,11 +1765,12 @@ font-size: 30px;
 padding: 1em 1.5em 1.5em 1.5em;
 background-color: rgba(255,255,255,1);
 position: relative;
--webkit-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
+/* -webkit-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
 -moz-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
+box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3); */
 z-index: 1;
 min-width: 350px;
+box-shadow: 0px 14px 43px -11px rgba(0,0,0,0.7);
 
 }
 .directory legend {
@@ -1791,12 +1792,13 @@ margin-bottom: 12px;
 padding: 1em 1.5em 1.5em 1.5em;
 background-color: rgba(255,255,255,1);
 position: relative;
--webkit-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
+/* -webkit-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
 -moz-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
+box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3); */
 z-index: 1;
 min-width: 350px;
 right: 39px;
+box-shadow: 0px 14px 43px -11px rgba(0,0,0,0.7);
 }
 
 
@@ -1842,13 +1844,13 @@ top: 11px;
 padding: 1em;
 background-color: rgba(255,255,255,1);
 position: relative;
--webkit-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
+/* -webkit-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
 -moz-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
+box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3); */
 z-index: 1;
 min-width: 250px;
 right: -95px;
-
+box-shadow: 0px 14px 43px -11px rgba(0,0,0,0.7);
 }
 
 .timesheets::after {
@@ -1867,12 +1869,13 @@ top: 11px;
 padding: 1em;
 background-color: rgba(255,255,255,1);
 position: relative;
--webkit-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
+/* -webkit-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
 -moz-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
+box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3); */
 z-index: 1;
 min-width: 250px;
 right: -98px;
+box-shadow: 0px 14px 43px -11px rgba(0,0,0,0.7);
 }
 
 .projects::after {
@@ -1891,12 +1894,13 @@ top: 11px;
 padding: 1em;
 background-color: rgba(255,255,255,1);
 position: relative;
--webkit-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
+/* -webkit-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
 -moz-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
+box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3); */
 z-index: 1;
 min-width: 250px;
 right: -96px;
+box-shadow: 0px 14px 43px -11px rgba(0,0,0,0.7);
 }
 
 .lms::after {
@@ -1915,12 +1919,13 @@ top: 11px;
 padding: 1em;
 background-color: rgba(255,255,255,1);
 position: relative;
--webkit-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
+/* -webkit-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
 -moz-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
-box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3);
+box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3); */
 z-index: 1;
 min-width: 250px;
 right: -94px;
+box-shadow: 0px 14px 43px -11px rgba(0,0,0,0.7);
 }
 
 .bookmarks::after {

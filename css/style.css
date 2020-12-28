@@ -1723,10 +1723,10 @@ height: 100%;
 z-index: 999999999;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
-}
+} */
 
 .corresponding {
 display: none;
@@ -2792,15 +2792,19 @@ li {
   padding: 1em 1.5em;
 }
 
-.row .whiteBox.ml1 p.darkBlue, .row legend {
+ .whiteBox.ml1 p.darkBlue, .row legend {
   color: #00467f !important;
   font-size: 20px !important;
 }
 
-.row .whiteBox.mr1 p.aqua.bold {
+ .whiteBox.mr1 p.aqua.bold {
   /* margin-bottom: .5em !important; */
   font-weight: 500;
   font-size: 16px !important;
+}
+
+ .whiteBox.mr1 p.aqua.bold:hover {
+  text-decoration: underline;
 }
 
  .whiteBox.mr1 p {
@@ -3952,7 +3956,7 @@ a.icon strong {
 
 
 .description p{
-  line-height:1
+  line-height: 1.4;
 }
 
 .bold{
@@ -4222,16 +4226,32 @@ p.darkBlue {
 }
 
 .smallBubble {
-  background: #BCF8F1;
-  position: relative;
-  border-radius: 20px;
-  padding: 3em 1em;
-  margin-bottom: 1em;
-  text-align: center;
-  -webkit-box-shadow: 0px 0px 15px 2px rgba(191,210,223,1);
-  -moz-box-shadow: 0px 0px 15px 2px rgba(191,210,223,1);
-  box-shadow: 0px 0px 14px 2px rgba(191,210,223,1);
-  max-height:8rem
+    background: #BCF8F1;
+    position: relative;
+    border-radius: 20px;
+    padding: 3em .8em;
+    margin-bottom: 1em;
+    text-align: center;
+
+    /* -webkit-box-shadow: 0px 0px 15px 2px rgba(191,210,223,1);
+    -moz-box-shadow: 0px 0px 15px 2px rgba(191,210,223,1);
+    box-shadow: 0px 0px 14px 2px rgba(191,210,223,1); */
+    max-height: 8rem;
+    box-shadow: 0px 5px 18px 5px rgba(14, 117, 123, 0.08);
+
+}
+
+.smallBubble:hover{
+      background: #0e7b9b;
+
+}
+.smallBubble:hover p{
+  color:white
+}
+@media (min-width:1450px){
+      .smallBubble {
+        max-width: 9em;
+      }
 }
 
 .smallBubble i {
@@ -4391,16 +4411,80 @@ p.darkBlue {
 #carousel span {
   font-size: 60px;
   position: relative;
-  top: -22px;
+  top: -5px;
   color: white;
 }
 
-.owl-nav button {
+/* .owl-nav button {
   position: absolute;
   top: 20%;
   transform: translateY(50%);
   background: rgba(255, 255, 255, 0.38) !important;
 }
+
+.owl-nav button {
+    position: absolute;
+    top: 0;
+    transform: translateY(0%);
+    background: #0E7B9B !important;
+    height: auto;
+    bottom: 40px;
+} */
+
+
+.owl-nav button {
+    position: absolute;
+    top: 0;
+    transform: translateY(0%);
+    /* background: #0E7B9B !important; */
+    background: transparent !important;
+    height: auto;
+    bottom: 40px;
+opacity:1;
+    width: 20px;
+}
+
+/* .owl-nav button.owl-prev {
+    position: absolute;
+    top: 0;
+    transform: translateY(0%);
+    background: #0E7B9B !important;
+    height: auto;
+    bottom: 40px;
+    left: -24px !important;
+    width: 20px;
+} */
+
+.owl-slider .item{
+  position: relative;
+}
+
+ .owl-item-overlay {
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  background: #08648F;
+  opacity:.75;
+  height: 60px;
+  z-index: 0;
+}
+
+.owl-item-overlay p {
+    position: absolute;
+    font-size: 16px;
+    color: white;
+    opacity: 1;
+    z-index: 5;
+
+    font-weight: 500;
+    line-height: 1;
+    top: 10px;
+    left: 10px;
+    width: 90%;
+}
+
+
 /*
 contact form styles */
 
@@ -4911,8 +4995,8 @@ padding-top: .5em;
   -moz-box-shadow: 0px 0px 19px -1px rgba(175,175,175,0.67); */
   box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.37);
   /* background: white; */
-  /* border-radius: 10px; */
-  border-radius: 50%;
+  border-radius: 10px;
+  /* border-radius: 50%; */
 }
 
 .cc-selector input[type="radio"]:checked + label.red {
@@ -4945,7 +5029,7 @@ box-shadow: 0px 0px 0px 3px rgba(95,201,32,1);
 
 
 
-/* .cc-selector input[type="radio"]:checked + label:after {
+.cc-selector input[type="radio"]:checked + label:after {
     content: "\f058";
     font-size: 18px;
     color: white;
@@ -4955,9 +5039,9 @@ box-shadow: 0px 0px 0px 3px rgba(95,201,32,1);
     font-weight: 900;
     text-decoration: inherit;
     position: absolute;
-    top: -11px;
+    top: -16px;
     right: -12px;
-} */
+}
 
 textarea {
     overflow: auto;
@@ -5158,6 +5242,10 @@ textarea {
   .cafe{
     flex-direction: column;
   }
+  main {
+    position: relative;
+    padding: 2em 2em;
+}
 }
 
 

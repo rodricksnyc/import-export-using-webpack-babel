@@ -116,127 +116,127 @@ $('.viewMore').keypress(
 
 
 
-$('.firstRow a:eq(0)').mouseenter(function() {
-	$(this).find('img').attr('src', 'images/living-well.svg')
-})
-
-$('.firstRow a:eq(0)').mouseleave(function() {
-	$(this).find('img').attr('src', 'images/forms-icon.png')
-})
-
-$('.firstRow a:eq(1)').mouseenter(function() {
-	$(this).find('img').attr('src', 'images/living-well.svg')
-})
-
-$('.firstRow a:eq(1)').mouseleave(function() {
-	$(this).find('img').attr('src', 'images/remote-icon.png')
-})
-
-$('.firstRow a:eq(2)').mouseenter(function() {
-	$(this).find('img').attr('src', 'images/living-well.svg')
-})
-
-$('.firstRow a:eq(2)').mouseleave(function() {
-	$(this).find('img').attr('src', 'images/covid-icon.png')
-})
-
-$('.firstRow a:eq(3)').mouseenter(function() {
-	$(this).find('img').attr('src', 'images/living-well.svg')
-})
-
-$('.firstRow a:eq(3)').mouseleave(function() {
-	$(this).find('img').attr('src', 'images/benefits-icon.png')
-})
-
-$('.firstRow a:eq(4)').mouseenter(function() {
-	$(this).find('img').attr('src', 'images/living-well.svg')
-})
-
-$('.firstRow a:eq(4)').mouseleave(function() {
-	$(this).find('img').attr('src', 'images/oasys-icon.png')
-})
-
-$('.firstRow a:eq(5)').mouseenter(function() {
-	$(this).find('img').attr('src', 'images/living-well.svg')
-})
-
-$('.firstRow a:eq(5)').mouseleave(function() {
-	$(this).find('img').attr('src', 'images/proposal-icon.png')
-})
-
-$('.firstRow a:eq(6)').mouseenter(function() {
-	$(this).find('img').attr('src', 'images/living-well.svg')
-})
-
-$('.firstRow a:eq(6)').mouseleave(function() {
-	$(this).find('img').attr('src', 'images/ros-icon.png')
-})
-
-$('.firstRow a:eq(7)').mouseenter(function() {
-	$(this).find('img').attr('src', 'images/living-well.svg')
-})
-
-$('.firstRow a:eq(7)').mouseleave(function() {
-	$(this).find('img').attr('src', 'images/rr-icon.png')
-})
-
-$('.firstRow a:eq(8)').mouseenter(function() {
-	$(this).find('img').attr('src', 'images/living-well.svg')
-})
-
-$('.firstRow a:eq(8)').mouseleave(function() {
-	$(this).find('img').attr('src', 'images/living-icon.png')
-})
-
-$('.firstRow a:eq(9)').mouseenter(function() {
-	$(this).find('img').attr('src', 'images/living-well.svg')
-})
-
-$('.firstRow a:eq(9)').mouseleave(function() {
-	$(this).find('img').attr('src', 'images/workday-icon.png')
-})
-
-
-$('.toggleDiv a:eq(0)').mouseenter(function() {
-	$(this).find('img').attr('src', 'images/living-well.svg')
-})
-
-$('.toggleDiv a:eq(0)').mouseleave(function() {
-	$(this).find('img').attr('src', 'images/IRB-icon.png')
-})
-
-$('.toggleDiv a:eq(1)').mouseenter(function() {
-	$(this).find('img').attr('src', 'images/living-well.svg')
-})
-
-$('.toggleDiv a:eq(1)').mouseleave(function() {
-	$(this).find('img').attr('src', 'images/a-icon.png')
-})
-
-$('.toggleDiv a:eq(2)').mouseenter(function() {
-	$(this).find('img').attr('src', 'images/living-well.svg')
-})
-
-$('.toggleDiv a:eq(2)').mouseleave(function() {
-	$(this).find('img').attr('src', 'images/training-icon.png')
-})
-
-$('.toggleDiv a:eq(3)').mouseenter(function() {
-	$(this).find('img').attr('src', 'images/living-well.svg')
-})
-
-$('.toggleDiv a:eq(3)').mouseleave(function() {
-	$(this).find('img').attr('src', 'images/campus-icon.png')
-})
-
-$('.toggleDiv a:eq(4)').mouseenter(function() {
-	$(this).find('img').attr('src', 'images/living-well.svg')
-})
-
-$('.toggleDiv a:eq(4)').mouseleave(function() {
-	$(this).find('img').attr('src', 'images/c-icon.png')
-})
-
+// $('.firstRow a:eq(0)').mouseenter(function() {
+// 	$(this).find('img').attr('src', 'images/living-well.svg')
+// })
+//
+// $('.firstRow a:eq(0)').mouseleave(function() {
+// 	$(this).find('img').attr('src', 'images/forms-icon.png')
+// })
+//
+// $('.firstRow a:eq(1)').mouseenter(function() {
+// 	$(this).find('img').attr('src', 'images/living-well.svg')
+// })
+//
+// $('.firstRow a:eq(1)').mouseleave(function() {
+// 	$(this).find('img').attr('src', 'images/remote-icon.png')
+// })
+//
+// $('.firstRow a:eq(2)').mouseenter(function() {
+// 	$(this).find('img').attr('src', 'images/living-well.svg')
+// })
+//
+// $('.firstRow a:eq(2)').mouseleave(function() {
+// 	$(this).find('img').attr('src', 'images/covid-icon.png')
+// })
+//
+// $('.firstRow a:eq(3)').mouseenter(function() {
+// 	$(this).find('img').attr('src', 'images/living-well.svg')
+// })
+//
+// $('.firstRow a:eq(3)').mouseleave(function() {
+// 	$(this).find('img').attr('src', 'images/benefits-icon.png')
+// })
+//
+// $('.firstRow a:eq(4)').mouseenter(function() {
+// 	$(this).find('img').attr('src', 'images/living-well.svg')
+// })
+//
+// $('.firstRow a:eq(4)').mouseleave(function() {
+// 	$(this).find('img').attr('src', 'images/oasys-icon.png')
+// })
+//
+// $('.firstRow a:eq(5)').mouseenter(function() {
+// 	$(this).find('img').attr('src', 'images/living-well.svg')
+// })
+//
+// $('.firstRow a:eq(5)').mouseleave(function() {
+// 	$(this).find('img').attr('src', 'images/proposal-icon.png')
+// })
+//
+// $('.firstRow a:eq(6)').mouseenter(function() {
+// 	$(this).find('img').attr('src', 'images/living-well.svg')
+// })
+//
+// $('.firstRow a:eq(6)').mouseleave(function() {
+// 	$(this).find('img').attr('src', 'images/ros-icon.png')
+// })
+//
+// $('.firstRow a:eq(7)').mouseenter(function() {
+// 	$(this).find('img').attr('src', 'images/living-well.svg')
+// })
+//
+// $('.firstRow a:eq(7)').mouseleave(function() {
+// 	$(this).find('img').attr('src', 'images/rr-icon.png')
+// })
+//
+// $('.firstRow a:eq(8)').mouseenter(function() {
+// 	$(this).find('img').attr('src', 'images/living-well.svg')
+// })
+//
+// $('.firstRow a:eq(8)').mouseleave(function() {
+// 	$(this).find('img').attr('src', 'images/living-icon.png')
+// })
+//
+// $('.firstRow a:eq(9)').mouseenter(function() {
+// 	$(this).find('img').attr('src', 'images/living-well.svg')
+// })
+//
+// $('.firstRow a:eq(9)').mouseleave(function() {
+// 	$(this).find('img').attr('src', 'images/workday-icon.png')
+// })
+//
+//
+// $('.toggleDiv a:eq(0)').mouseenter(function() {
+// 	$(this).find('img').attr('src', 'images/living-well.svg')
+// })
+//
+// $('.toggleDiv a:eq(0)').mouseleave(function() {
+// 	$(this).find('img').attr('src', 'images/IRB-icon.png')
+// })
+//
+// $('.toggleDiv a:eq(1)').mouseenter(function() {
+// 	$(this).find('img').attr('src', 'images/a-hover.svg')
+// })
+//
+// $('.toggleDiv a:eq(1)').mouseleave(function() {
+// 	$(this).find('img').attr('src', 'images/a-icon.png')
+// })
+//
+// $('.toggleDiv a:eq(2)').mouseenter(function() {
+// 	$(this).find('img').attr('src', 'images/living-well.svg')
+// })
+//
+// $('.toggleDiv a:eq(2)').mouseleave(function() {
+// 	$(this).find('img').attr('src', 'images/training-icon.png')
+// })
+//
+// $('.toggleDiv a:eq(3)').mouseenter(function() {
+// 	$(this).find('img').attr('src', 'images/living-well.svg')
+// })
+//
+// $('.toggleDiv a:eq(3)').mouseleave(function() {
+// 	$(this).find('img').attr('src', 'images/campus-icon.png')
+// })
+//
+// $('.toggleDiv a:eq(4)').mouseenter(function() {
+// 	$(this).find('img').attr('src', 'images/living-well.svg')
+// })
+//
+// $('.toggleDiv a:eq(4)').mouseleave(function() {
+// 	$(this).find('img').attr('src', 'images/c-icon.png')
+// })
+//
 
 
 

@@ -4260,7 +4260,7 @@ p.darkBlue {
   margin-bottom:.4em
 }
 
-/* 
+/*
 .smallBubble:hover{
   background: #0e7b9b;
 
@@ -5079,8 +5079,8 @@ right: 520px !important;
   -moz-box-shadow: 0px 0px 19px -1px rgba(175,175,175,0.67); */
   box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.37);
   /* background: white; */
-  border-radius: 10px;
-  /* border-radius: 50%; */
+  /* border-radius: 10px; */
+  border-radius: 50%;
 }
 
 .cc-selector input[type="radio"]:checked + label.red {
@@ -5113,7 +5113,7 @@ right: 520px !important;
 
 
 
-.cc-selector input[type="radio"]:checked + label:after {
+/* .cc-selector input[type="radio"]:checked + label:after {
   content: "\f058";
   font-size: 18px;
   color: white;
@@ -5125,7 +5125,7 @@ right: 520px !important;
   position: absolute;
   top: -16px;
   right: -12px;
-}
+} */
 
 textarea {
   overflow: auto;

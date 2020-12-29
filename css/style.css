@@ -5521,7 +5521,7 @@ padding: .2em .5em;
 }
 
 
-@media (min-width: 992px) and (max-width:1500px){
+@media (min-width: 1376px) and (max-width:1500px){
 .popularR .col-lg-2 {
   -ms-flex: 0 0 20% !important;
   flex: 0 0 20% !important;
@@ -5539,11 +5539,14 @@ padding: .2em .5em;
     -ms-flex: 0 0 50% !important;
     flex: 0 0 50% !important;
     max-width: 50% !important;
+    padding: 0% 2% !important;
   }
 
   .owl-item-overlay p{
     font-size:13px;
   }
+
+
 
 
 }

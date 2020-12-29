@@ -47,18 +47,14 @@ $(document).ready(function() {
 		}
 	});
 
-	$(".pop").popover({
-    trigger: "manual",
-    html: true,
-    animation: false
-  })
-  .on("mouseenter", function() {
+	$("[data-toggle=popover]").on("mouseenter", function() {
     var _this = this;
     $(this).popover("show");
     $(".popover").on("mouseleave", function() {
       $(_this).popover('hide');
     });
-  }).on("mouseleave", function() {
+  })
+	.on("mouseleave", function() {
     var _this = this;
     setTimeout(function() {
       if (!$(".popover:hover").length) {
@@ -68,6 +64,10 @@ $(document).ready(function() {
 
 	})
 
+	$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
 
 	// $(function() {
 	//   let e = $('[data-toggle="popover"]').popover().data('bs.popover').getTipElement();
@@ -76,20 +76,23 @@ $(document).ready(function() {
 	// });
 
 
-	$('[data-toggle="popover"]').popover().on("show.bs.popover", function(){
-	    $(".popover").addClass("custom");
-	});
+	// $('[data-toggle="popover"]').popover().on("show.bs.popover", function(){
+	//     $(".popover").addClass("custom");
+	// });
+	//
+
+
+	$("[data-toggle=popover]").popover({
+	        html : true,
+	        trigger: 'focus',
+	        content: function() {
+	            var content = $(this).attr("data-popover-content");
+	            return $(content).children(".popover-body").html();
+	        }
+	    });
 
 
 
-	// $("[data-toggle=popover]").popover({
-	//         html : true,
-	//         trigger: 'focus',
-	//         content: function() {
-	//             var content = $(this).attr("data-popover-content");
-	//             return $(content).children(".popover-body").html();
-	//         }
-	//     });
 
 
 
@@ -436,41 +439,41 @@ $('.slideOutTab').on('mouseenter', function() {
 
 
 
-		var Ip = 'https://ipinfo.io/json';
-
-		$.getJSON(Ip, function(data) {
-			var city = data.city;
-			var region = data.region;
-			var country = data.country;
-
-
-			var proxy = 'https://cors-anywhere.herokuapp.com/';
-
-			var URL = 'http://api.openweathermap.org/data/2.5/weather?id=4367175&appid=b2f2b923be22181ef89baa544605b888'
-
-
-			$.getJSON(proxy + URL, function(data) {
-				var type = data.weather[0].main;  //array 0 index
-				var id = data.weather[0].id; //array 0 index
-				var city = data.name;
-
-				var tempCel = Math.round(data.main.temp - 273.15);
-				var tempC = tempCel + '°C';
-				var weather = data.weather[0].description;
-				// var tempF = Math.round(tempCel * (9 / 5) + 32) +  "<p>" +  "&deg; F" + "</p>" ;
-				var icon = data.weather[0].icon;
-				var tempBool = true;
-
-				//Output data to display on the page
-				$('#city').text(city);
-				$('#state').text(region);
-				$("#temp").html("<p>" + Math.round(tempCel * (9 / 5) + 32) +  "&deg; F" + "</p>");
-				var weatherIcon = 'http://openweathermap.org/img/w/' + icon + '.png';
-				$('#wIcon').html('<img src=' + weatherIcon + '>');
-
-
-			});
-		});
+		// var Ip = 'https://ipinfo.io/json';
+		//
+		// $.getJSON(Ip, function(data) {
+		// 	var city = data.city;
+		// 	var region = data.region;
+		// 	var country = data.country;
+		//
+		//
+		// 	var proxy = 'https://cors-anywhere.herokuapp.com/';
+		//
+		// 	var URL = 'http://api.openweathermap.org/data/2.5/weather?id=4367175&appid=b2f2b923be22181ef89baa544605b888'
+		//
+		//
+		// 	$.getJSON(proxy + URL, function(data) {
+		// 		var type = data.weather[0].main;  //array 0 index
+		// 		var id = data.weather[0].id; //array 0 index
+		// 		var city = data.name;
+		//
+		// 		var tempCel = Math.round(data.main.temp - 273.15);
+		// 		var tempC = tempCel + '°C';
+		// 		var weather = data.weather[0].description;
+		// 		// var tempF = Math.round(tempCel * (9 / 5) + 32) +  "<p>" +  "&deg; F" + "</p>" ;
+		// 		var icon = data.weather[0].icon;
+		// 		var tempBool = true;
+		//
+		// 		//Output data to display on the page
+		// 		$('#city').text(city);
+		// 		$('#state').text(region);
+		// 		$("#temp").html("<p>" + Math.round(tempCel * (9 / 5) + 32) +  "&deg; F" + "</p>");
+		// 		var weatherIcon = 'http://openweathermap.org/img/w/' + icon + '.png';
+		// 		$('#wIcon').html('<img src=' + weatherIcon + '>');
+		//
+		//
+		// 	});
+		// });
 
 	$(document).keyup(function (e) {
       if (e.keyCode == 16) {

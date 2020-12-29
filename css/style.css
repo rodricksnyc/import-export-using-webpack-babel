@@ -1195,6 +1195,8 @@ a:hover {
     padding-bottom:0px;
     padding-right:0px;
     height: 75px;
+    position: relative;
+    z-index: 0;
   }
 
   .navbar-brand {
@@ -1723,10 +1725,10 @@ a:hover {
   z-index: 999999999;
 }
 
-/* ::-webkit-scrollbar {
+#slideOut2 ::-webkit-scrollbar {
 width: 0px;
 background: transparent;
-} */
+}
 
 .corresponding {
   display: none;
@@ -5537,6 +5539,10 @@ padding: .2em .5em;
     -ms-flex: 0 0 50% !important;
     flex: 0 0 50% !important;
     max-width: 50% !important;
+  }
+
+  .owl-item-overlay p{
+    font-size:13px;
   }
 
 

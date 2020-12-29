@@ -4260,7 +4260,7 @@ p.darkBlue {
   margin-bottom:.4em
 }
 
-/*
+
 .smallBubble:hover{
   background: #0e7b9b;
 
@@ -4268,7 +4268,7 @@ p.darkBlue {
 
 .smallBubble:hover p{
   color:white
-} */
+}
 
 .toggleDiv {
   display: none

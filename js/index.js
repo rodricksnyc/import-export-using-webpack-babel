@@ -119,124 +119,124 @@ $('.viewMore').keypress(
 
 
 
-$('.firstRow a:eq(0)').mouseenter(function() {
+$('.forms-icon').parent().mouseenter(function() {
 	$(this).find('img').attr('src', 'images/forms.svg')
 })
 
-$('.firstRow a:eq(0)').mouseleave(function() {
+$('.forms-icon').parent().mouseleave(function() {
 	$(this).find('img').attr('src', 'images/form-icon.png')
 })
 
-$('.firstRow a:eq(1)').mouseenter(function() {
+$('.work-remote-icon').parent().mouseenter(function() {
 	$(this).find('img').attr('src', 'images/remote.svg')
 })
 
-$('.firstRow a:eq(1)').mouseleave(function() {
+$('.work-remote-icon').parent().mouseleave(function() {
 	$(this).find('img').attr('src', 'images/remote-icon.png')
 })
 
-$('.firstRow a:eq(2)').mouseenter(function() {
+$('.covid-icon').parent().mouseenter(function() {
 	$(this).find('img').attr('src', 'images/COVID-19.svg')
 })
 
-$('.firstRow a:eq(2)').mouseleave(function() {
+$('.covid-icon').parent().mouseleave(function() {
 	$(this).find('img').attr('src', 'images/covid-icon.png')
 })
 
-$('.firstRow a:eq(3)').mouseenter(function() {
+$('.benefits-icon').parent().mouseenter(function() {
 	$(this).find('img').attr('src', 'images/b.svg')
 })
 
-$('.firstRow a:eq(3)').mouseleave(function() {
+$('.benefits-icon').parent().mouseleave(function() {
 	$(this).find('img').attr('src', 'images/benefits-icon.png')
 })
 
-$('.firstRow a:eq(4)').mouseenter(function() {
+$('.oasys-icon').parent().mouseenter(function() {
 	$(this).find('img').attr('src', 'images/oasys-icon.svg')
 })
 
-$('.firstRow a:eq(4)').mouseleave(function() {
+$('.oasys-icon').parent().mouseleave(function() {
 	$(this).find('img').attr('src', 'images/oasys-icon.png')
 })
 
-$('.firstRow a:eq(5)').mouseenter(function() {
+$('.proposal-icon').parent().mouseenter(function() {
 	$(this).find('img').attr('src', 'images/prop.svg')
 })
 
-$('.firstRow a:eq(5)').mouseleave(function() {
+$('.proposal-icon').parent().mouseleave(function() {
 	$(this).find('img').attr('src', 'images/proposal-icon.png')
 })
 
-$('.firstRow a:eq(6)').mouseenter(function() {
+$('.ROS-icon').parent().mouseenter(function() {
 	$(this).find('img').attr('src', 'images/ROS.svg')
 })
 
-$('.firstRow a:eq(6)').mouseleave(function() {
+$('.ROS-icon').parent().mouseleave(function() {
 	$(this).find('img').attr('src', 'images/ros-icon.png')
 })
 
-$('.firstRow a:eq(7)').mouseenter(function() {
+$('.RR-icon').parent().mouseenter(function() {
 	$(this).find('img').attr('src', 'images/rr.svg')
 })
 
-$('.firstRow a:eq(7)').mouseleave(function() {
+$('.RR-icon').parent().mouseleave(function() {
 	$(this).find('img').attr('src', 'images/rr-icon.png')
 })
 
-$('.firstRow a:eq(8)').mouseenter(function() {
+$('.living-well-icon').parent().mouseenter(function() {
 	$(this).find('img').attr('src', 'images/living.svg')
 })
 
-$('.firstRow a:eq(8)').mouseleave(function() {
+$('.living-well-icon').parent().mouseleave(function() {
 	$(this).find('img').attr('src', 'images/living-icon.png')
 })
 
-$('.firstRow a:eq(9)').mouseenter(function() {
+$('.workday-icon').parent().mouseenter(function() {
 	$(this).find('img').attr('src', 'images/w.svg')
 })
 
-$('.firstRow a:eq(9)').mouseleave(function() {
+$('.workday-icon').parent().mouseleave(function() {
 	$(this).find('img').attr('src', 'images/workday-icon.png')
 })
 
 
-$('.toggleDiv a:eq(0)').mouseenter(function() {
+$('.IRB-icon').parent().mouseenter(function() {
 	$(this).find('img').attr('src', 'images/IRB-icon.svg')
 })
 
-$('.toggleDiv a:eq(0)').mouseleave(function() {
+$('.IRB-icon').parent().mouseleave(function() {
 	$(this).find('img').attr('src', 'images/IRB-icon.png')
 })
 
-$('.toggleDiv a:eq(1)').mouseenter(function() {
+$('.AIB-icon').parent().mouseenter(function() {
 	$(this).find('img').attr('src', 'images/a.svg')
 })
 
-$('.toggleDiv a:eq(1)').mouseleave(function() {
+$('.AIB-icon').parent().mouseleave(function() {
 	$(this).find('img').attr('src', 'images/a-icon.png')
 })
 
-$('.toggleDiv a:eq(2)').mouseenter(function() {
+$('.training-icon').parent().mouseenter(function() {
 	$(this).find('img').attr('src', 'images/t.svg')
 })
 
-$('.toggleDiv a:eq(2)').mouseleave(function() {
+$('.training-icon').parent().mouseleave(function() {
 	$(this).find('img').attr('src', 'images/training-icon.png')
 })
 
-$('.toggleDiv a:eq(3)').mouseenter(function() {
+$('.campus-icon').parent().mouseenter(function() {
 	$(this).find('img').attr('src', 'images/campus.svg')
 })
 
-$('.toggleDiv a:eq(3)').mouseleave(function() {
+$('.campus-icon').parent().mouseleave(function() {
 	$(this).find('img').attr('src', 'images/campus-icon.png')
 })
 
-$('.toggleDiv a:eq(4)').mouseenter(function() {
+$('.communication-icon').parent().mouseenter(function() {
 	$(this).find('img').attr('src', 'images/communication.svg')
 })
 
-$('.toggleDiv a:eq(4)').mouseleave(function() {
+$('.communication-icon').parent().mouseleave(function() {
 	$(this).find('img').attr('src', 'images/c-icon.png')
 })
 
@@ -439,41 +439,41 @@ $('.slideOutTab').on('mouseenter', function() {
 
 
 
-		// var Ip = 'https://ipinfo.io/json';
-		//
-		// $.getJSON(Ip, function(data) {
-		// 	var city = data.city;
-		// 	var region = data.region;
-		// 	var country = data.country;
-		//
-		//
-		// 	var proxy = 'https://cors-anywhere.herokuapp.com/';
-		//
-		// 	var URL = 'http://api.openweathermap.org/data/2.5/weather?id=4367175&appid=b2f2b923be22181ef89baa544605b888'
-		//
-		//
-		// 	$.getJSON(proxy + URL, function(data) {
-		// 		var type = data.weather[0].main;  //array 0 index
-		// 		var id = data.weather[0].id; //array 0 index
-		// 		var city = data.name;
-		//
-		// 		var tempCel = Math.round(data.main.temp - 273.15);
-		// 		var tempC = tempCel + '°C';
-		// 		var weather = data.weather[0].description;
-		// 		// var tempF = Math.round(tempCel * (9 / 5) + 32) +  "<p>" +  "&deg; F" + "</p>" ;
-		// 		var icon = data.weather[0].icon;
-		// 		var tempBool = true;
-		//
-		// 		//Output data to display on the page
-		// 		$('#city').text(city);
-		// 		$('#state').text(region);
-		// 		$("#temp").html("<p>" + Math.round(tempCel * (9 / 5) + 32) +  "&deg; F" + "</p>");
-		// 		var weatherIcon = 'http://openweathermap.org/img/w/' + icon + '.png';
-		// 		$('#wIcon').html('<img src=' + weatherIcon + '>');
-		//
-		//
-		// 	});
-		// });
+		var Ip = 'https://ipinfo.io/json';
+
+		$.getJSON(Ip, function(data) {
+			var city = data.city;
+			var region = data.region;
+			var country = data.country;
+
+
+			var proxy = 'https://cors-anywhere.herokuapp.com/';
+
+			var URL = 'http://api.openweathermap.org/data/2.5/weather?id=4367175&appid=b2f2b923be22181ef89baa544605b888'
+
+
+			$.getJSON(proxy + URL, function(data) {
+				var type = data.weather[0].main;  //array 0 index
+				var id = data.weather[0].id; //array 0 index
+				var city = data.name;
+
+				var tempCel = Math.round(data.main.temp - 273.15);
+				var tempC = tempCel + '°C';
+				var weather = data.weather[0].description;
+				// var tempF = Math.round(tempCel * (9 / 5) + 32) +  "<p>" +  "&deg; F" + "</p>" ;
+				var icon = data.weather[0].icon;
+				var tempBool = true;
+
+				//Output data to display on the page
+				$('#city').text(city);
+				$('#state').text(region);
+				$("#temp").html("<p>" + Math.round(tempCel * (9 / 5) + 32) +  "&deg; F" + "</p>");
+				var weatherIcon = 'http://openweathermap.org/img/w/' + icon + '.png';
+				$('#wIcon').html('<img src=' + weatherIcon + '>');
+
+
+			});
+		});
 
 	$(document).keyup(function (e) {
       if (e.keyCode == 16) {

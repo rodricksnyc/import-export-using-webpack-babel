@@ -2730,7 +2730,9 @@ font-size: 15px !important;
 }
 
 .nav-item {
-  width: 50%;
+  /* width: 50%; */
+  width:auto;
+  max-width:115px;
 }
 
 .nav-tabs .nav-link.active {

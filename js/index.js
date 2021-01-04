@@ -705,7 +705,65 @@ $('.select2-selection__arrow').append('<i class="fa fa-angle-down"></i>');
 
 
 
+//hover for dropdown items in main navbar
 
+  var $dropdown = $(".navbar-nav .nav-item");
+  var $dropdownToggle = $(".dropdown-toggle");
+  var $dropdownMenu = $(".dropdown-menu");
+  var showClass = "show";
+
+  $(window).on("load resize", function() {
+    if (this.matchMedia("(min-width: 768px)").matches) {
+      $dropdown.hover(
+        function() {
+          var $this = $(this);
+          $this.addClass(showClass);
+          $this.find($dropdownToggle).attr("aria-expanded", "true");
+          $this.find($dropdownMenu).addClass(showClass);
+        },
+        function() {
+          var $this = $(this);
+          $this.removeClass(showClass);
+          $this.find($dropdownToggle).attr("aria-expanded", "false");
+          $this.find($dropdownMenu).removeClass(showClass);
+        }
+      );
+    } else {
+      $dropdown.off("mouseenter mouseleave");
+    }
+  });
+
+
+  var dropdownButton = $(".btn-group .dropdown-menu")
+
+  dropdownButton.on('mouseleave', function() {
+
+    dropdownButton.removeClass('show');
+
+  })
+
+
+  $('.submenu').on("mouseenter", function(e){
+    $(this).next('.small-dropdown-menu').show();
+		$(this).addClass('newBackground')
+    e.stopPropagation();
+    // e.preventDefault();
+  });
+
+		var leaving2 = $('.submenu').closest('.nav-item')
+
+	  $(leaving2).on("mouseleave", function(e){
+
+			$('.submenu').removeClass('newBackground')
+
+		})
+
+	var leaving = $('.small-dropdown-menu').closest('.nav-item')
+
+  $(leaving).on("mouseleave", function(e){
+    $('.small-dropdown-menu').hide();
+
+  });
 
 
 

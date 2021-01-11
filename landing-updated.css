@@ -1127,7 +1127,7 @@ h1, h2, h3, h4, h5, h6, p, a, li {
   -webkit-box-shadow: 0px 0px 15px 2px rgba(191,210,223,1);
   -moz-box-shadow: 0px 0px 15px 2px rgba(191,210,223,1);
   box-shadow: 0px 0px 14px 2px rgba(191,210,223,1);
-  
+    z-index: 0;
 }
 
 
@@ -4685,7 +4685,8 @@ max-width: 9em;
 
   #slideOut2 {
     position: fixed;
-    right:  -520px;
+    /* right:  -520px; */
+    right: -558px;
     transition-property: all;
     transition-duration: .5s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
@@ -4832,7 +4833,13 @@ max-width: 9em;
     position: absolute;
     right: 12px;
     top: 8px;
+    margin: 0rem -5rem -1rem auto !important
   }
+
+#slideOut2 textarea{
+      margin-bottom: 1em;
+}
+
   #slideOut2 .whiteLarger {
     font-size: 22px;
     margin-top: 0rem;
@@ -4878,7 +4885,7 @@ max-width: 9em;
   }
   #slideOut2 legend {
     padding: 0 !important;
-    width: 0% !important;
+    width: 100% !important;
     padding: 0 !important;
     margin-bottom: 0px !important;
     font-size: 18px !important;
@@ -5039,15 +5046,15 @@ max-width: 9em;
 
   #slideOut2 .firstBlock .form-check.oneQuestion input + label::before {
     border: 1px solid white;
-    content: "";
-    height: 18px;
-    left: 0;
-    position: absolute;
-    top: 3px;
-    width: 18px;
-    border-radius: 50%;
-    padding: 6px;
-    background: white;
+      content: "";
+      height: 4px;
+      left: 0;
+      position: absolute;
+      top: 3px;
+      width: 4px;
+      border-radius: 50%;
+      padding: 6px;
+      background: white;
   }
 
   #slideOut2 .firstBlock .form-check.oneQuestion input + label::after {
@@ -5058,8 +5065,8 @@ max-width: 9em;
     position: absolute;
     left: 2px;
     top: 5px;
-    width: 12px;
-    height: 12px;
+    width: 0px;
+    height: 0px;
     transition: opacity 0.2s ease-in-out;
   }
 

@@ -4,6 +4,18 @@ body {
 
 }
 
+#s4-bodyContainer {
+    padding-bottom: 0px !important;
+}
+
+#ctl00_ctl46_wi_TopMenuControl{
+  display: none;
+}
+
+.row {
+    margin-top: 0px;
+}
+
 .form-control {
   display: block !important;
   width: 100% !important;
@@ -99,6 +111,7 @@ h1, h2, h3, h4, h5, h6, p, a, li {
   -webkit-box-shadow: 0px 0px 15px 2px rgba(191,210,223,1);
   -moz-box-shadow: 0px 0px 15px 2px rgba(191,210,223,1);
   box-shadow: 0px 0px 14px 2px rgba(191,210,223,1);
+  z-index:0
 }
 
 #temp p {
@@ -298,6 +311,7 @@ span.right{
 span.right .nav-item {
   margin: 2.75rem .25rem 0rem .25rem;
   width: 100%;
+  max-width: 100%;
 }
 
 
@@ -1062,11 +1076,11 @@ footer {
   bottom: 0px;
   left: 0px;
   width: 100%;
-  min-height: 7rem;
+  min-height: 6rem;
 }
 
 .img-wes-logo {
-  height:3em;
+  height:2.4em;
 
 }
 
@@ -1110,7 +1124,7 @@ footer {
 
 .footer-wrapper {
 
-  padding: 2em 2em 0em 2em;
+  padding: 1em 2em 0em 2em;
   display: flex;
   justify-content: space-between;
   align-items:center
@@ -1196,7 +1210,7 @@ a:hover {
     padding-right:0px;
     height: 75px;
     position: relative;
-    z-index: 999;
+    z-index: 0;
   }
 
   .navbar-brand {
@@ -1325,6 +1339,7 @@ a:hover {
     -webkit-box-shadow: 0px 0px 27px -2px rgba(0,0,0,0.44);
     -moz-box-shadow: 0px 0px 27px -2px rgba(0,0,0,0.44);
     box-shadow: 0px 0px 27px -2px rgba(0,0,0,0.44);
+        z-index: -1;
   }
 
   .navbar-nav {
@@ -1429,7 +1444,7 @@ a:hover {
   .nav-item:hover {
     background: #0e7b9b;
 
-    border-bottom: 5px solid #a9dbdb;
+    /* border-bottom: 5px solid #a9dbdb; */
   }
 
   .right .nav-item:hover {
@@ -1477,7 +1492,7 @@ a:hover {
     width:100%;
     left:0;
     right:0;
-    top:73px;
+    top:14px;
     display:block;
     visibility: hidden;
     opacity: 0;
@@ -1496,14 +1511,18 @@ a:hover {
 
   .dropdown-menu .nav-item {
     padding: 0em;
-    margin: .6em 0em .2em 0em;
+    margin: .6em 0em .2em 1.6em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     max-width: none;
     text-align: left !important;
     height:auto;
+    min-width:260px
   }
+  .navbar-expand-xl .navbar-nav .dropdown-menu {
+    position: relative;
+}
 
   .navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
     display:block;
@@ -1851,7 +1870,7 @@ a:hover {
   box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3); */
   z-index: 1;
   min-width: 250px;
-  right: -95px;
+  right: -114px;
   box-shadow: 0px 14px 43px -11px rgba(0,0,0,0.7);
 }
 
@@ -1876,7 +1895,7 @@ a:hover {
   box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3); */
   z-index: 1;
   min-width: 250px;
-  right: -98px;
+  right: -114px;
   box-shadow: 0px 14px 43px -11px rgba(0,0,0,0.7);
 }
 
@@ -1901,7 +1920,7 @@ a:hover {
   box-shadow: 0px 0px 14px 2px rgba(191,210,223,.3); */
   z-index: 1;
   min-width: 250px;
-  right: -96px;
+  right: -114px;
   box-shadow: 0px 14px 43px -11px rgba(0,0,0,0.7);
 }
 
@@ -2206,7 +2225,7 @@ ul ul {
 }
 .main-wrapper {
   /* padding: 3em 2em; */
-  padding: 2em 5em 6em 0em;
+  padding: 0em 5em 6em 0em;
   min-height: 100vh;
   width: 100%;
   position: relative;
@@ -4833,7 +4852,7 @@ max-width: 9em;
     position: absolute;
     right: 12px;
     top: 8px;
-    margin: 0rem -5rem -1rem auto !important
+        margin: -1rem -4.6rem -1rem auto !important;
   }
 
 #slideOut2 textarea{

@@ -1,41 +1,41 @@
 $(document).ready(function() {
 
 
-	var Ip = 'https://ipinfo.io/json';
-
-	$.getJSON(Ip, function(data) {
-		var city = data.city;
-		var region = data.region;
-		var country = data.country;
-
-
-		var proxy = 'https://cors-anywhere.herokuapp.com/';
-
-		var URL = 'http://api.openweathermap.org/data/2.5/weather?id=4367175&appid=b2f2b923be22181ef89baa544605b888'
-
-
-		$.getJSON(proxy + URL, function(data) {
-			var type = data.weather[0].main;  //array 0 index
-			var id = data.weather[0].id; //array 0 index
-			var city = data.name;
-
-			var tempCel = Math.round(data.main.temp - 273.15);
-			var tempC = tempCel + '°C';
-			var weather = data.weather[0].description;
-			// var tempF = Math.round(tempCel * (9 / 5) + 32) +  "<p>" +  "&deg; F" + "</p>" ;
-			var icon = data.weather[0].icon;
-			var tempBool = true;
-
-			//Output data to display on the page
-			$('#city').text(city);
-			$('#state').text(region);
-			$("#temp").html("<p>" + Math.round(tempCel * (9 / 5) + 32) +  "&deg; F" + "</p>");
-			var weatherIcon = 'http://openweathermap.org/img/w/' + icon + '.png';
-			$('#wIcon').html('<img src=' + weatherIcon + '>');
-
-
-		});
-	});
+	// var Ip = 'https://ipinfo.io/json';
+	//
+	// $.getJSON(Ip, function(data) {
+	// 	var city = data.city;
+	// 	var region = data.region;
+	// 	var country = data.country;
+	//
+	//
+	// 	var proxy = 'https://cors-anywhere.herokuapp.com/';
+	//
+	// 	var URL = 'http://api.openweathermap.org/data/2.5/weather?id=4367175&appid=b2f2b923be22181ef89baa544605b888'
+	//
+	//
+	// 	$.getJSON(proxy + URL, function(data) {
+	// 		var type = data.weather[0].main;  //array 0 index
+	// 		var id = data.weather[0].id; //array 0 index
+	// 		var city = data.name;
+	//
+	// 		var tempCel = Math.round(data.main.temp - 273.15);
+	// 		var tempC = tempCel + '°C';
+	// 		var weather = data.weather[0].description;
+	// 		// var tempF = Math.round(tempCel * (9 / 5) + 32) +  "<p>" +  "&deg; F" + "</p>" ;
+	// 		var icon = data.weather[0].icon;
+	// 		var tempBool = true;
+	//
+	// 		//Output data to display on the page
+	// 		$('#city').text(city);
+	// 		$('#state').text(region);
+	// 		$("#temp").html("<p>" + Math.round(tempCel * (9 / 5) + 32) +  "&deg; F" + "</p>");
+	// 		var weatherIcon = 'http://openweathermap.org/img/w/' + icon + '.png';
+	// 		$('#wIcon').html('<img src=' + weatherIcon + '>');
+	//
+	//
+	// 	});
+	// });
 
 
 
@@ -381,7 +381,7 @@ $('.communication-icon').parent().mouseleave(function() {
 
 		if($('body').hasClass('showContact')) {
 
-				console.log("eriugbierib")
+
 
 			$('#slideOut2 .form-control').attr('tabindex', '-1');
 
@@ -394,6 +394,7 @@ $('.communication-icon').parent().mouseleave(function() {
 
 			$("#slideOut2").removeClass('showslideOut2');
 			$('.contactUsOverlay').hide();
+				$("#one, #two").removeClass('blueTab');
 
 			setTimeout(function() {
 				$('body').removeClass('showContact')
@@ -412,7 +413,7 @@ $('.communication-icon').parent().mouseleave(function() {
 		$('.form-check-input').attr('tabindex', '-1');
 		$('#slideOut2 .modal-header a').attr('tabindex', '-1')
 
-			$("#one, #two").removeClass('blueTab');
+		$("#one, #two").removeClass('blueTab');
 
 	}
 
@@ -710,41 +711,47 @@ $('.select2-selection__arrow').append('<i class="fa fa-angle-down"></i>');
 
 //hover for dropdown items in main navbar
 
-  var $dropdown = $(".navbar-nav .nav-item");
-  var $dropdownToggle = $(".dropdown-toggle");
-  var $dropdownMenu = $(".dropdown-menu");
-  var showClass = "show";
+  // var $dropdown = $(".navbar-nav .nav-item");
+  // var $dropdownToggle = $(".dropdown-toggle");
+  // var $dropdownMenu = $(".dropdown-menu");
+  // var showClass = "show";
+	//
+  // $(window).on("load resize", function() {
+  //   if (this.matchMedia("(min-width: 768px)").matches) {
+  //     $dropdown.hover(
+  //       function() {
+	//
+  //         var $this = $(this);
+  //         $this.addClass(showClass);
+  //         $this.find($dropdownToggle).attr("aria-expanded", "true");
+  //         $this.find($dropdownMenu).addClass(showClass);
+  //       },
+  //       function() {
+	//
+  //         var $this = $(this);
+  //         $this.removeClass(showClass);
+  //         $this.find($dropdownToggle).attr("aria-expanded", "false");
+  //         $this.find($dropdownMenu).removeClass(showClass);
+  //       }
+  //     );
+  //   } else {
+  //     $dropdown.off("mouseenter mouseleave");
+  //   }
+  // });
 
-  $(window).on("load resize", function() {
-    if (this.matchMedia("(min-width: 768px)").matches) {
-      $dropdown.hover(
-        function() {
-          var $this = $(this);
-          $this.addClass(showClass);
-          $this.find($dropdownToggle).attr("aria-expanded", "true");
-          $this.find($dropdownMenu).addClass(showClass);
-        },
-        function() {
-          var $this = $(this);
-          $this.removeClass(showClass);
-          $this.find($dropdownToggle).attr("aria-expanded", "false");
-          $this.find($dropdownMenu).removeClass(showClass);
-        }
-      );
-    } else {
-      $dropdown.off("mouseenter mouseleave");
-    }
-  });
+//
+// var dropdownButton = $(".btn-group .dropdown-menu")
+//
+//   dropdownButton.on('mouseleave', function() {
+//
+//     dropdownButton.removeClass('show');
+//
+//   })
 
 
-  var dropdownButton = $(".btn-group .dropdown-menu")
-
-  dropdownButton.on('mouseleave', function() {
-
-    dropdownButton.removeClass('show');
-
-  })
-
+$('.dropdown').on("mouseenter", function(e){
+$('.dropdown-big').show()
+})
 
   $('.submenu').on("mouseenter", function(e){
     $(this).next('.small-dropdown-menu').show();
@@ -766,10 +773,14 @@ $('.select2-selection__arrow').append('<i class="fa fa-angle-down"></i>');
   $(leaving).on("mouseleave", function(e){
     $('.small-dropdown-menu').hide();
 
+
+
   });
 
 
-
+$('nav').on('mouseleave', function() {
+	$('.dropdown-big').hide()
+})
 
 
 });

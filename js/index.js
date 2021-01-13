@@ -36,98 +36,8 @@ $(document).ready(function() {
 	//
 	// 	});
 	// });
-
-
-
-	var totalItems = $('.item').length;
-	var currentIndex = $('div.active').index() + 1;
-
-	$('.carousel').on('slid.bs.carousel', function () {
-		var carouselData = $(this).data('bs.carousel')
-
-		currentIndex = $('div.active').index()
-
-		$('.sliderBlock').removeClass('active-p').eq(currentIndex).addClass('active-p')
-	})
-
-
-
-	jQuery("#carousel").owlCarousel({
-		autoplay: true,
-		lazyLoad: true,
-		loop: true,
-		margin: 10,
-		/*
-		animateOut: 'fadeOut',
-		animateIn: 'fadeIn',
-		*/
-		responsiveClass: true,
-		autoHeight: true,
-		autoplayTimeout: 7000,
-		smartSpeed: 800,
-		nav: true,
-		responsive: {
-			0: {
-				items: 1
-			},
-
-			600: {
-				items: 3
-			},
-
-			1024: {
-				items: 4
-			},
-
-			1366: {
-				items: 3
-			}
-		}
-	});
-
-	$("[data-toggle=popover]").on("mouseenter", function() {
-    var _this = this;
-    $(this).popover("show");
-    $(".popover").on("mouseleave", function() {
-      $(_this).popover('hide');
-    });
-  })
-	.on("mouseleave", function() {
-    var _this = this;
-    setTimeout(function() {
-      if (!$(".popover:hover").length) {
-        $(_this).popover("hide");
-      }
-    }, 300);
-
-	})
-
-	$(function () {
-  $('[data-toggle="popover"]').popover()
-})
-
-
-	// $(function() {
-	//   let e = $('[data-toggle="popover"]').popover().data('bs.popover').getTipElement();
 	//
-	// 	$(e).addClass('custom');
-	// });
-
-
-	// $('[data-toggle="popover"]').popover().on("show.bs.popover", function(){
-	//     $(".popover").addClass("custom");
-	// });
 	//
-
-
-	$("[data-toggle=popover]").popover({
-	        html : true,
-	        trigger: 'focus',
-	        content: function() {
-	            var content = $(this).attr("data-popover-content");
-	            return $(content).children(".popover-body").html();
-	        }
-	    });
 
 
 
@@ -753,7 +663,7 @@ $('.dropdown').on("mouseenter", function(e){
 $('.dropdown-big').show()
 })
 
-  $('.submenu').on("mouseenter", function(e){
+  $('.submenu').not('.hiddenLink').on("mouseenter", function(e){
     $(this).next('.small-dropdown-menu').show();
 		$(this).addClass('newBackground')
     e.stopPropagation();
@@ -779,8 +689,104 @@ $('.dropdown-big').show()
 
 
 $('nav').on('mouseleave', function() {
-	$('.dropdown-big').hide()
+	// $('.dropdown-big').hide()
 })
+
+$('.hiddenLink').parent().css('border-bottom', '1px solid #edfcfc')
+
+
+
+var totalItems = $('.item').length;
+var currentIndex = $('div.active').index() + 1;
+
+$('.carousel').on('slid.bs.carousel', function () {
+	var carouselData = $(this).data('bs.carousel')
+
+	currentIndex = $('div.active').index()
+
+	$('.sliderBlock').removeClass('active-p').eq(currentIndex).addClass('active-p')
+})
+
+
+
+jQuery("#carousel").owlCarousel({
+	autoplay: true,
+	lazyLoad: true,
+	loop: true,
+	margin: 10,
+	/*
+	animateOut: 'fadeOut',
+	animateIn: 'fadeIn',
+	*/
+	responsiveClass: true,
+	autoHeight: true,
+	autoplayTimeout: 7000,
+	smartSpeed: 800,
+	nav: true,
+	responsive: {
+		0: {
+			items: 1
+		},
+
+		600: {
+			items: 3
+		},
+
+		1024: {
+			items: 4
+		},
+
+		1366: {
+			items: 3
+		}
+	}
+});
+
+$("[data-toggle=popover]").on("mouseenter", function() {
+	var _this = this;
+	$(this).popover("show");
+	$(".popover").on("mouseleave", function() {
+		$(_this).popover('hide');
+	});
+})
+.on("mouseleave", function() {
+	var _this = this;
+	setTimeout(function() {
+		if (!$(".popover:hover").length) {
+			$(_this).popover("hide");
+		}
+	}, 300);
+
+})
+
+$(function () {
+$('[data-toggle="popover"]').popover()
+})
+
+
+// $(function() {
+//   let e = $('[data-toggle="popover"]').popover().data('bs.popover').getTipElement();
+//
+// 	$(e).addClass('custom');
+// });
+
+
+// $('[data-toggle="popover"]').popover().on("show.bs.popover", function(){
+//     $(".popover").addClass("custom");
+// });
+//
+
+
+$("[data-toggle=popover]").popover({
+				html : true,
+				trigger: 'focus',
+				content: function() {
+						var content = $(this).attr("data-popover-content");
+						return $(content).children(".popover-body").html();
+				}
+		});
+
+
 
 
 });

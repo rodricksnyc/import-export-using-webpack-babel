@@ -1,47 +1,60 @@
 $(document).ready(function() {
 
+$.getJSON("https://api.openweathermap.org/data/2.5/weather?q=Rockville&units=imperial&appid=b2f2b923be22181ef89baa544605b888", function(data) {
 
-	var Ip = 'https://ipinfo.io/json';
+console.log(data);
 
-	$.getJSON(Ip, function(data) {
-		var city = data.city;
-		var region = data.region;
-		var country = data.country;
+var icon = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
 
+var temp = Math.floor(data.main.temp);
 
-		var proxy = 'https://cors-anywhere.herokuapp.com/';
-
-		var URL = 'http://api.openweathermap.org/data/2.5/weather?id=4367175&appid=b2f2b923be22181ef89baa544605b888'
+var weather = data.weather[0].main;
 
 
-		$.getJSON(proxy + URL, function(data) {
-			var type = data.weather[0].main;  //array 0 index
-			var id = data.weather[0].id; //array 0 index
-			var city = data.name;
+$('.icon').attr('src', icon);
+$(".temp").append(temp  + ' &#8457;');
 
-			var tempCel = Math.round(data.main.temp - 273.15);
-			var tempC = tempCel + '°C';
-			var weather = data.weather[0].description;
-			// var tempF = Math.round(tempCel * (9 / 5) + 32) +  "<p>" +  "&deg; F" + "</p>" ;
-			var icon = data.weather[0].icon;
-			var tempBool = true;
-
-			//Output data to display on the page
-			$('#city').text(city);
-			$('#state').text(region);
-			$("#temp").html("<p>" + Math.round(tempCel * (9 / 5) + 32) +  "&deg; F" + "</p>");
-			var weatherIcon = 'http://openweathermap.org/img/w/' + icon + '.png';
-			$('#wIcon').html('<img src=' + weatherIcon + '>');
-
-
-		});
-	});
+$(".weather").append(weather );
+});
 
 
 
-
-
-
+	// var Ip = 'https://ipinfo.io/json';
+	//
+	// $.getJSON(Ip, function(data) {
+	// 	var city = data.city;
+	// 	var region = data.region;
+	// 	var country = data.country;
+	//
+	//
+	// 	var proxy = 'https://cors-anywhere.herokuapp.com/';
+	//
+	// 	var URL = 'http://api.openweathermap.org/data/2.5/weather?id=4367175&appid=b2f2b923be22181ef89baa544605b888'
+	//
+	//
+	// 	$.getJSON(proxy + URL, function(data) {
+	// 		var type = data.weather[0].main;  //array 0 index
+	// 		var id = data.weather[0].id; //array 0 index
+	// 		var city = data.name;
+	//
+	// 		var tempCel = Math.round(data.main.temp - 273.15);
+	// 		var tempC = tempCel + '°C';
+	// 		var weather = data.weather[0].description;
+	// 		// var tempF = Math.round(tempCel * (9 / 5) + 32) +  "<p>" +  "&deg; F" + "</p>" ;
+	// 		var icon = data.weather[0].icon;
+	// 		var tempBool = true;
+	//
+	// 		//Output data to display on the page
+	// 		$('#city').text(city);
+	// 		$('#state').text(region);
+	// 		$("#temp").html("<p>" + Math.round(tempCel * (9 / 5) + 32) +  "&deg; F" + "</p>");
+	// 		var weatherIcon = 'http://openweathermap.org/img/w/' + icon + '.png';
+	// 		$('#wIcon').html('<img src=' + weatherIcon + '>');
+	//
+	//
+	// 	});
+	// });
+	//
 
 
 
@@ -661,6 +674,7 @@ $('.select2-selection__arrow').append('<i class="fa fa-angle-down"></i>');
 
 $('.dropdown').on("mouseenter", function(e){
 $('.dropdown-big').show()
+$('.enclosing').show()
 })
 
   $('.submenu').not('.hiddenLink').on("mouseenter", function(e){
@@ -689,7 +703,8 @@ $('.dropdown-big').show()
 
 
 $('nav').on('mouseleave', function() {
-	// $('.dropdown-big').hide()
+	$('.dropdown-big').hide()
+	$('.enclosing').hide()
 })
 
 $('.hiddenLink').parent().css('border-bottom', '1px solid #edfcfc')

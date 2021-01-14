@@ -1,3 +1,12 @@
+/*jennifer*/
+.groupheader{
+	display: none;
+	}
+
+/*close*/
+
+
+
 body {
   font-family: 'Montserrat', sans-serif !important;
   overflow-x: hidden;
@@ -1205,7 +1214,7 @@ a:hover {
     padding-right:0px;
     height: 75px;
     position: relative;
-
+    z-index:1
   }
 
   .navbar-brand {
@@ -1334,6 +1343,7 @@ a:hover {
     -webkit-box-shadow: 0px 0px 27px -2px rgba(0,0,0,0.44);
     -moz-box-shadow: 0px 0px 27px -2px rgba(0,0,0,0.44);
     box-shadow: 0px 0px 27px -2px rgba(0,0,0,0.44);
+    z-index: -1;
   }
 
   .navbar-nav {
@@ -1527,16 +1537,47 @@ padding-left: 506%;
 
 } */
 
-.navbar-nav .dropdown-menu{
-  left: -170px;
+/* .navbar-nav .dropdown-menu{
+  left: -216px;
   top: 2px;
   display: block;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.3s linear;
-  width: 1250%;
-  padding-left: 757%;
+  width: 1150%;
+  padding-left: 760%;
+}  */
+
+.enclosing {
+    left: -215%;
+    top: 0px;
+    display: block;
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    transition: visibility 0s, opacity 0.3s linear;
+    width: 315%;
+    /* padding-left: 760%; */
+    position: absolute;
+    background: #edfcfc !important;
+    height: 460px;
+    bottom: 0;
 }
+
+.navbar-nav  .dropdown-menu {
+    left: 118%;
+    top: 1px;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+    width: 315px;
+    /* padding-left: 760%; */
+}
+
+
+
+
+
 .nav-item {
 
   width:auto;
@@ -1570,6 +1611,7 @@ padding-left: 506%;
   transform: translateY(0%);
   z-index:999;
   position: absolute;
+  min-width:200%;
 }
 
 .nav-tabs .nav-link.active {
@@ -1597,9 +1639,16 @@ padding-left: 506%;
   /* color: white !important; */
   border-bottom:none;
   font-size:15px;
+  padding-top: 15px;
+  color: #16487D !important;
+  font-weight:400 !important
 }
 
 
+.nav .nav-item:hover a {
+  color:#16487D;
+  font-weight:600
+}
 
 
 .dropdown-menu  .text-uppercase {
@@ -1684,7 +1733,8 @@ position: absolute;
 .nav-link.submenu{
   padding-top:15px !important;
   padding-bottom: 15px !important;
-  padding-left:15px !important
+  padding-left:15px !important;
+  font-size:14px !important
 }
 
 .navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
@@ -2199,10 +2249,10 @@ h3 {
 
 h4 {
 
-  color: #00467f !important;
-  font-size: 20px !important;
-  line-height: 1.2 !important;
-  margin-bottom:1em !important
+  color: #00467f;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom:1em
 }
 
 
@@ -2356,7 +2406,8 @@ h2.darkBlue{
   font-size:34px !important;
   border-bottom:2px solid #22BBAD !important;
   color: #00467f !important;
-  font-family: 'Montserrat', sans-serif !important
+  font-family: 'Montserrat', sans-serif !important;
+
 }
 
 li {
@@ -3464,6 +3515,46 @@ p.info:before {
   min-width: 10em;
   line-height: 1.5;
 }
+
+
+
+.main-part h1{
+
+    font-size:34px !important;
+    border-bottom:2px solid #22BBAD !important;
+    color: #00467f !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    margin-top: 1rem!important;
+    margin-bottom: .5em !important;
+}
+
+.main-part li:before {
+
+  display: block;
+  position: relative;
+  max-width: 0px;
+  max-height: 0px;
+  left: -14px;
+  top: 0px;
+  color: #2fbaad;
+  font-size: 30px;
+  content: "\f0da";
+  font-family: "Font Awesome 5 Pro";
+
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  font-size: 14px;
+  margin-left: 0em;
+
+}
+
+.main-part li {
+  list-style: none;
+  margin:.5em 0em;
+}
+
 
 .row p.margin-after a {
   color: #0e7b9b;

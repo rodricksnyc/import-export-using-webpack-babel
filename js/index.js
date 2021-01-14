@@ -1,21 +1,21 @@
 $(document).ready(function() {
 
-$.getJSON("https://api.openweathermap.org/data/2.5/weather?q=Rockville&units=imperial&appid=b2f2b923be22181ef89baa544605b888", function(data) {
-
-console.log(data);
-
-var icon = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
-
-var temp = Math.floor(data.main.temp);
-
-var weather = data.weather[0].main;
-
-
-$('.icon').attr('src', icon);
-$(".temp").append(temp  + ' &#8457;');
-
-$(".weather").append(weather );
-});
+// $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=Rockville&units=imperial&appid=b2f2b923be22181ef89baa544605b888", function(data) {
+//
+// console.log(data);
+//
+// var icon = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+//
+// var temp = Math.floor(data.main.temp);
+//
+// var weather = data.weather[0].main;
+//
+//
+// $('.icon').attr('src', icon);
+// $(".temp").append(temp  + ' &#8457;');
+//
+// $(".weather").append(weather );
+// });
 
 
 
@@ -703,8 +703,8 @@ $('.enclosing').show()
 
 
 $('nav').on('mouseleave', function() {
-	$('.dropdown-big').hide()
-	$('.enclosing').hide()
+	// $('.dropdown-big').hide()
+	// $('.enclosing').hide()
 })
 
 $('.hiddenLink').parent().css('border-bottom', '1px solid #edfcfc')

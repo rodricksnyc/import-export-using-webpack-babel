@@ -1608,10 +1608,10 @@ padding-left: 506%;
 .dropdown-menu .small-dropdown-menu {
   left:100%;
 
-  transform: translateY(0%);
+  /* transform: translateY(0%); */
   z-index:999;
   position: absolute;
-  min-width:200%;
+  min-width:275%;
 }
 
 .nav-tabs .nav-link.active {
@@ -1638,10 +1638,15 @@ padding-left: 506%;
 .small-dropdown-menu .dropdown-item{
   /* color: white !important; */
   border-bottom:none;
-  font-size:15px;
+  font-size:14px;
   padding-top: 15px;
   color: #16487D !important;
-  font-weight:400 !important
+  font-weight:400 !important;
+  white-space: pre-wrap;
+
+             white-space: normal;
+             display:block;
+    max-width: 440px;
 }
 
 

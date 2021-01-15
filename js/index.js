@@ -683,6 +683,28 @@ $('.enclosing').show()
 })
 
 
+$(window).on('load', function() {
+// var grid = $('.grid-container').children()
+
+$('.grid-container').each(function() {
+
+if ($(this).children().length  > 8) {
+	$(this).closest('.grid-container').addClass('twoColumns')
+}
+
+// if ($(this).children().length  > 10) {
+// 	$(this).closest('.grid-container').addClass('largeColumns')
+// }
+
+
+})
+
+
+
+
+})
+
+
 
   // $('.submenu').not('.hiddenLink').on("mouseenter", function(e){
 

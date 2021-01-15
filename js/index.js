@@ -677,7 +677,11 @@ $('.dropdown-big').show()
 $('.enclosing').show()
 })
 
-  $('.submenu').not('.hiddenLink').on("mouseenter", function(e){
+
+
+  // $('.submenu').not('.hiddenLink').on("mouseenter", function(e){
+
+  $('.submenu').on("mouseenter", function(e){
     $(this).next('.small-dropdown-menu').show();
 		$(this).addClass('newBackground')
     e.stopPropagation();
@@ -703,12 +707,12 @@ $('.enclosing').show()
 
 
 $('nav').on('mouseleave', function() {
-	// $('.dropdown-big').hide()
-	// $('.enclosing').hide()
+	$('.dropdown-big').hide()
+	$('.enclosing').hide()
 })
 
-$('.hiddenLink').parent().css('border-bottom', '1px solid #edfcfc')
-
+// $('.hiddenLink').parent().css('border-bottom', '1px solid #edfcfc')
+//
 
 
 var totalItems = $('.item').length;

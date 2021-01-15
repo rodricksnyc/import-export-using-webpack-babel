@@ -311,8 +311,9 @@ span.right{
 
 
 span.right .nav-item {
-  margin: 2.75rem .25rem 0rem .25rem;
   width: 100%;
+  max-width:none;
+  margin-top: 3em;
 }
 
 

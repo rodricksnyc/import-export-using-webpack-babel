@@ -1619,7 +1619,7 @@ padding-left: 760%;
   z-index:999;
   position: absolute;
   min-width:100%;
-  bottom:-100%;
+  bottom:-600%;
 }
 
 .nav-tabs .nav-link.active {
@@ -1726,23 +1726,28 @@ max-width: 320px;
 
 .megamenu .nav-item:nth-child(5) .small-dropdown-menu{
   top: -400%;
+  bottom:-200%;
 }
 
 
 .megamenu .nav-item:nth-child(6) .small-dropdown-menu{
   top: -500%;
+  bottom:-200%;
 }
 
 .megamenu .nav-item:nth-child(7) .small-dropdown-menu{
   top: -600%;
+  bottom:-100%;
 }
 
 .megamenu .nav-item:nth-child(8) .small-dropdown-menu{
   top: -700%;
+  bottom:-100%;
 }
 
 .megamenu .nav-item:nth-child(9) .small-dropdown-menu{
   top: -800%;
+  bottom:-100%;
 }
 
 .megamenu .nav-item:nth-child(10) .small-dropdown-menu{

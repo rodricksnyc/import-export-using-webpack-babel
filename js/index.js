@@ -716,6 +716,21 @@ $('nav').on('mouseleave', function() {
 	$('.enclosing').hide()
 })
 
+//
+// if ($('.megamenu .nav-item').not(':has(.small-dropdown-menu)')) {
+// 	$(this).find('.submenu').addClass('hiddenLink')
+//
+// }
+
+
+$('.megamenu .nav-item').each(function() {
+    if(!$(this).children().hasClass("small-dropdown-menu")){
+			$(this).find('.submenu').addClass('hiddenLink')
+    }
+});
+
+
+
 // $('.hiddenLink').parent().css('border-bottom', '1px solid #edfcfc')
 //
 

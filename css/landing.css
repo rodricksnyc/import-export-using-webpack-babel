@@ -5,6 +5,10 @@
 
 /*close*/
 
+.navbar-toggler-icon {
+  display: none
+}
+
 .zIndex0{
   z-index: 0 !important
 }

@@ -211,6 +211,7 @@ $('.communication-icon').parent().mouseleave(function() {
 
 	var open = function() {
 
+
 	$('.changeTitle').html('We value your feedback!')
 		$('.contactUsOverlay').show();
 
@@ -236,7 +237,7 @@ $('.communication-icon').parent().mouseleave(function() {
 		$("#one").addClass('blueTab');
 		$("#two").removeClass('blueTab');
 
-
+			$('.navbar').addClass('zIndex0')
 				$('.firstBlock').addClass('hide1').fadeOut()
 				$('.secondBlock').removeClass('hide1').fadeIn()
 
@@ -284,6 +285,7 @@ $('.communication-icon').parent().mouseleave(function() {
 
 		$('.firstBlock').removeClass('hide1').fadeIn()
 		$('.secondBlock').addClass('hide1').fadeOut()
+		$('.navbar').addClass('zIndex0')
 
 		setTimeout(function() {
 			$('body').addClass('showContact')
@@ -304,7 +306,7 @@ $('.communication-icon').parent().mouseleave(function() {
 
 		if($('body').hasClass('showContact')) {
 
-
+				$('.navbar').removeClass('zIndex0')
 
 			$('#slideOut2 .form-control').attr('tabindex', '-1');
 
@@ -338,6 +340,8 @@ $('.communication-icon').parent().mouseleave(function() {
 
 		$("#one, #two").removeClass('blueTab');
 
+		$('.navbar').removeClass('zIndex0')
+
 	}
 
 	$('#close').keypress(
@@ -353,6 +357,7 @@ $('.communication-icon').parent().mouseleave(function() {
 		if (code == 13) {
 
 			$('#one').focus().css('outline', 'dashed 3px #4599ff')
+				$('.navbar').removeClass('zIndex0')
 		}
 
 	})

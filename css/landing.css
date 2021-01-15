@@ -5,7 +5,9 @@
 
 /*close*/
 
-
+.zIndex0{
+  z-index: 0 !important
+}
 
 body {
   font-family: 'Montserrat', sans-serif !important;
@@ -1215,7 +1217,7 @@ a:hover {
     padding-right:0px;
     height: 75px;
     position: relative;
-    z-index:1
+    z-index: 9999;
   }
 
   .navbar-brand {
@@ -2525,12 +2527,12 @@ ul ul {
   background: linear-gradient(179.52deg, rgba(255, 255, 255, 0.05) 0.19%, rgba(34, 187, 173, 0.05) 46.97%, rgba(8, 100, 143, 0.05) 99.12%);
   position:relative;
   overflow:visible;
-  z-index: 0;
+  z-index: 8888;
 }
 
 .rel {
   position: relative;
-  z-index: 999;
+  z-index: 7;
 }
 
 .bottom-pic {

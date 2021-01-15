@@ -1861,7 +1861,7 @@ position: absolute;
   right:0;
   height: 460px;
   top: 75px;
-  /* display: none; */
+  display: none;
   z-index: 10;
 }
 

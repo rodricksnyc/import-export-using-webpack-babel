@@ -345,7 +345,7 @@ span.right .nav-item {
 .d-lg-block {
   position: relative;
   z-index:10;
-  left: -4%;
+  left: 0;
 }
 /* span.right:before {
 
@@ -1995,13 +1995,28 @@ display:block;
 }
 
 
-@media (max-width:1400px) {
+@media (max-width:1520px) and (min-width:1401px){
   /* .angle:after {
   left:-18%
   } */
 
   .top-search-input-wrapper .form-control {
-    max-width:120px
+    max-width:200px;
+
+  }
+
+
+}
+
+
+@media (max-width:1400px) {
+.d-lg-block {
+left:-2%
+
+}
+
+  .top-search-input-wrapper .form-control {
+    max-width:150px
 
   }
 

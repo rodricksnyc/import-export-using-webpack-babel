@@ -108,6 +108,8 @@ footer {
 }
 
 
+
+
 h1, h2, h3, h4, h5, h6, p, a, li {
   font-family: 'Montserrat', sans-serif;
 }
@@ -3031,6 +3033,31 @@ font-size: 15px !important;
   padding-bottom: .6rem;
 }
 
+.twoAcross{
+  display: flex;
+  justify-content: space-between;;
+  align-items: flex-start;
+  padding:1em 3em
+}
+
+.toc{
+  border-bottom: 1px solid #dbedef;
+  padding: .4em 0em;
+  margin: 0;
+
+}
+
+@media (max-width:1300px){
+  .twoAcross{
+    flex-direction: column;
+  }
+}
+
+.tableOfContents{
+  background: #e6f7f5;
+  margin-bottom:1em
+}
+
 .ml1{
   margin-left:1em;
 }
@@ -3625,18 +3652,78 @@ p.info:before {
   width:33%
 }
 
+.main-part .whiteBubble p{
+    color:black;
+    font-size: 16px;
+    line-height: 1.5 !important;
+
+}
+
+.main-part .noDecoration {
+  text-decoration: none !important
+
+}
+
+.main-part .aqua {
+    color: #0E7B9B;
+}
+
+.main-part  .whiteBubble .aqua {
+    color: #0E7B9B;
+}
+
+.main-part  .whiteBubble i{
+  padding-left:5px;
+}
+
+.main-part .whiteBubble
+
+.main-part  .whiteBubble a:hover i{
+  text-decoration: none !important
+}
+
 .main-part .mail.margin-after td {
   font-size: 16px;
   line-height: 1.8;
 }
 
+.main-part .whiteBubble
+
 .mail.margin-after{
 
   margin-bottom:2em
 }
+.main-part h2 {
+    color: #00467f !important;
+    font-size: 26px !important;
+    font-weight: 600;
+    margin:.5em 0em;
+}
 
-a {
-  color:#0e7b9b;
+.main-part h3 {
+    color: #00467f !important;
+    font-size: 22px !important;
+    font-weight: 600;
+    margin:.5em 0em;
+}
+
+
+.main-part a {
+  color:#0e7b9b !important;
+  margin-bottom:.5em
+}
+
+.main-part a:hover {
+  color:#0e7b9b !important;
+  text-decoration: underline;
+}
+
+
+
+
+.main-part  a:hover .whiteBubble p {
+
+  text-decoration: none !important;
 }
 
 

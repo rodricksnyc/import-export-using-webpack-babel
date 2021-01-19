@@ -2926,7 +2926,7 @@ li {
 
 .row .whiteBox p.aqua.bold{
   /* margin-bottom:.5em !important; */
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 .row .whiteBox p.aqua.bold:hover, .row .whiteBox a:hover{
@@ -4455,6 +4455,14 @@ p.darkBlue {
 
 .aqua {
   color:#0E7B9B;
+}
+
+a.aqua:hover{
+    color:#0E7B9B;
+}
+
+a.aqua{
+  font-weight:400
 }
 
 .light{

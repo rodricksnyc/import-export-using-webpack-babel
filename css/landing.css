@@ -4181,7 +4181,13 @@ a.icon strong {
 }
 
 .greenColor{
-  color:#20851E
+  color:#20851E;
+  font-weight:500
+}
+
+.purple{
+  color: #855FA5;
+  font-weight:500
 }
 
 .dateBlock.blue{

@@ -1,0 +1,1017 @@
+<%@Master language="C#"%>
+<%@Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="wssucmui" TagName="MUISelector" Src="~/_controltemplates/15/MUISelector.ascx"%>
+<%@Register TagPrefix="wssuc" TagName="Welcome" Src="~/_controltemplates/15/Welcome.ascx"%>
+<%@Register TagPrefix="SearchWC" Namespace="Microsoft.Office.Server.Search.WebControls" Assembly="Microsoft.Office.Server.Search, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="PublishingNavigation" Namespace="Microsoft.SharePoint.Publishing.Navigation" Assembly="Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="PublishingRibbon" TagName="PublishingRibbon" Src="~/_controltemplates/15/Ribbon.ascx"%>
+
+<!DOCTYPE HTML>
+
+<SharePoint:SPHtmlTag runat="server" id="SPHtmlTag" dir="&lt;%$Resources:wss,multipages_direction_dir_value%&gt;">
+
+    <head runat="server">
+
+
+        <meta http-equiv="X-UA-Compatible" content="IE=10" />
+        <meta charset="utf-8" />
+        <meta name="GENERATOR" content="Microsoft SharePoint" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Expires" content="0" />
+
+
+
+        <!-- ===== STARTER: Robots  ======================================================================================================= -->
+
+        <SharePoint:RobotsMetaTag runat="server" />
+
+
+
+		<!-- ===== STARTER: Favicon / Windows Tile ======================================================================================== -->
+
+		<SharePoint:SPShortcutIcon runat="server" IconUrl="../siteassets/images/favicon.ico" />
+
+		<SharePoint:SPPinnedSiteTile runat="server" TileUrl="../siteassets/images/favicon.png" TileColor="#0072C6" />
+
+
+
+		<!-- ===== STARTER: Page Title loaded from page or page layout ==================================================================== -->
+
+		<SharePoint:PageTitle runat="server"><asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"><SharePoint:ProjectProperty Property="Title" runat="server" /></asp:ContentPlaceHolder></SharePoint:PageTitle>
+
+
+
+		<!-- ===== STARTER: SP Scripts and CSS  =========================================================================================== -->
+
+		<SharePoint:StartScript runat="server" />
+
+		<SharePoint:CssLink runat="server" Version="15" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&amp;display=swap" rel="stylesheet" />
+
+		<SharePoint:CacheManifestLink runat="server" />
+
+		<SharePoint:PageRenderMode runat="server" RenderModeType="Standard" />
+
+
+		<SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false" />
+
+		<SharePoint:ScriptLink language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false" />
+
+		<SharePoint:ScriptLink language="javascript" name="callout.js" OnDemand="true" runat="server" Localizable="false" />
+
+		<SharePoint:ScriptLink language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false" />
+
+		<SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false" />
+
+		<SharePoint:CustomJSUrl runat="server" />
+
+		<SharePoint:SoapDiscoveryLink runat="server" />
+
+<!--  BEGININING OF ACCORDION QUICK lAUNCH JS
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+ jQuery(function($){
+  jQuery('.ms-core-listMenu-verticalBox ul.root > li > a').each(function ()
+  {
+     jChildren = jQuery(this).next('ul');
+     if(jChildren.length!=0)
+     {
+        $(this).find("span.menu-item-text").append("<img src='https://wesinfo2021.westat.com/OAsys/Site%20Assets/plusarrow.png' border='0' class='imgAlign' />");
+     }
+  });
+  var jChildrens = jQuery('.ms-core-listMenu-verticalBox ul.root ul');
+   //Expand Active Parent node
+   var selectedIndex = -1;
+   for(var i=0; i < jChildrens.length; i++) {
+     jChidlren = jQuery(jChildrens[i]);
+     if(jChidlren.find('li.selected').length > 0) {
+       selectedIndex = i;
+       break;
+     }
+   }
+   jChildrens.hide();
+   if(selectedIndex!=-1)
+   {
+    jChildrens.eq(selectedIndex).parent("li").find("img.imgAlign").attr("src","https://wesinfo2021.westat.com/OAsys/Site%20Assets/minusarrow.png");
+    jChildrens.eq(selectedIndex).slideDown();
+   }
+   //Parents
+   jQuery('.ms-core-listMenu-verticalBox ul.root > li > a').mousehover(function (e) {
+     jChildren = jQuery(this).next('ul');
+     if(jChildren.length!=0)
+     {
+      e.preventDefault();
+      $(this).find("img.imgAlign").attr("src","https://wesinfo2021.westat.com/OAsys/Site%20Assets/plusarrow.png");
+      jChildrens.slideUp();
+      if (jChildren.is(':visible') == false)
+      {
+      $(this).find("img.imgAlign").attr("src","https://wesinfo2021.westat.com/OAsys/Site%20Assets/minusarrow.png");
+        jChildren.slideDown();
+      }
+     }
+   });
+
+ });  </script>  -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+// Find all the top level links in the Quick Launch that have children
+var topLevelLinks = $("div[id$='zz11_V4QuickLaunchMenu'] > ul > li:has('ul') > a");
+
+// Prepend the little "twiddle" icon to each top level link
+topLevelLinks.prepend("<span class='ms-commentexpand-iconouter ql-icon'><img alt='expand' src='https://wesinfo2021.westat.com/OAsys/Site%20Assets/down-arrow-trc-16.png' class='ms-commentexpand-icon'></span>");
+
+// We're starting with all of the sections collapsed. If you want them expanded, comment this out.
+topLevelLinks.closest("li").find("> ul").hide();
+
+// Set up for the click even of on the top level links
+topLevelLinks.click(function(e) {
+
+  // We're going to stop the default behavior
+  e.preventDefault();
+
+  // Find the elements we need to work with
+  var childUl = $(this).closest("li").find("> ul");
+  var isVisible = childUl.is(":visible")
+
+  // If the section is visible, hide it, and vice versa
+  if(isVisible) {
+
+    // Replace the icon with its antitheses
+    $(this).find(".ql-icon").replaceWith("<span class='ms-commentexpand-iconouter ql-icon'><img alt='Expand' src='https://wesinfo2021.westat.com/OAsys/Site%20Assets/down-arrow-trc-16.png' class='ms-commentexpand-icon'></span>");
+    // Hide the child links by sliding up. Note: You could change the effect here.
+    childUl.slideUp();
+
+  } else {
+
+    // Replace the icon with its antitheses
+    $(this).find(".ql-icon").replaceWith("<span class='ms-commentcollapse-iconouter ql-icon'><img alt='Collapse' src='https://wesinfo2021.westat.com/OAsys/Site%20Assets/up-arrow-trc-16.png' class='ms-commentcollapse-icon'></span>");
+    // Show the child links by sliding down. Note: You could change the effect here.
+    childUl.slideDown();
+
+  }
+
+});
+
+});
+</script>
+
+<!-- END OF ACCORDION QUICK LAUNCH JS -->
+
+
+
+		<!-- ===== STARTER: Additional header placeholder - overridden by asp:content on pages or page layouts  =========================== -->
+
+		<asp:ContentPlaceHolder ID="PlaceHolderAdditionalPageHead" runat="server" />
+
+		<SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true" />
+
+
+
+		<!-- ===== STARTER: Core SharePoint CSS =========================================================================================== -->
+
+		<SharePoint:CssRegistration Name="Themable/corev15.css" runat="server" />
+
+<!--custom wesinfo stylesheets-->
+       	<SharePoint:CssRegistration name="/siteassets/css/normalize.css" after="corev15.css" runat="server"/>
+        <SharePoint:CssRegistration name="/siteassets/vendorlibs/bootstrap/css/bootstrap.min.css" after="corev15.css" runat="server"/>
+        <SharePoint:CssRegistration name="/siteassets/css/wesinfo.css" after="corev15.css" runat="server"/>
+        <SharePoint:CssRegistration name="/siteassets/css/main.css" after="corev15.css" runat="server"/>
+        <SharePoint:CssRegistration name="/siteassets/vendorlibs/font-awesome-pro/css/all.css" after="corev15.css" runat="server"/>
+               	<SharePoint:CssRegistration name="/siteassets/css/style.css" after="corev15.css" runat="server"/>
+        <SharePoint:CssRegistration name="/siteassets/css/SPBoot.css" after="corev15.css" runat="server"/>
+ <!--close custom -->
+ 		<SharePoint:CssRegistration name="/siteassets/css/QuickLaunch.css" after="corev15.css" runat="server"/>
+
+	</head>
+
+
+
+	<body>
+<!-- custom wesinfo header -->
+        <nav class="navbar navbar-expand-xl navbar-inverse bg-inverse">
+            <a href="/pages/landing.aspx" class="brand navbar-brand d-lg-non">
+                <h1 class="white">Wes<span class="strong">Info</span></h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fal fa-bars">
+                    </i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarToggle">
+
+                 <SharePoint:DelegateControl runat="server" ControlId="wesinfo_TopMenuControl" AllowMultipleControls="true"></SharePoint:DelegateControl>
+
+                <div class="d-none d-lg-block">
+                    <div class="d-flex rel">
+                        <div class="form-inline">
+                            <div class="">
+                                <!--  <input class="form-control allResults" type="search" placeholder="Enter search term here" aria-label="Search"/>
+                                <i class="fal fa-search allResults t-white f-16">
+                                </i>-->
+                                <div data-name="SearchBox">
+                                    <div class="ms-webpart-chrome ms-webpart-chrome-fullWidth ">
+                                        <div webpartid="00000000-0000-0000-0000-000000000000" haspers="true" id="WebPartWPQ1" width="100%" class="ms-WPBody noindex " onlyformepart="true" allowdelete="false" style="">
+                                            <div componentid="ctl00_ctl51_csr" id="ctl00_ctl51_csr">
+                                               <div id="SearchBox" name="Control">
+                                  <div class="ms-srch-sb ms-srch-sb-border top-search-input-wrapper" id="ctl00_ctl51_csr_sboxdiv">
+                                                    <!--     <input type="text" value="Search this site" maxlength="2048" title="Enter search term here" id="ctl00_ctl51_csr_sbox" autocomplete="off" autocorrect="off" onkeypress="EnsureScriptFunc('Search.ClientControls.js', 'Srch.U', function() {if (Srch.U.isEnterKey(String.fromCharCode(event.keyCode))) {$find('ctl00_ctl51_csr').search($get('ctl00_ctl51_csr_sbox').value);return Srch.U.cancelEvent(event);}})" onkeydown="EnsureScriptFunc('Search.ClientControls.js', 'Srch.U', function() {var ctl = $find('ctl00_ctl51_csr');ctl.activateDefaultQuerySuggestionBehavior();})" onfocus="EnsureScriptFunc('Search.ClientControls.js', 'Srch.U', function() {var ctl = $find('ctl00_ctl51_csr');ctl.hidePrompt();ctl.setBorder(true);})" onblur="EnsureScriptFunc('Search.ClientControls.js', 'Srch.U', function() {var ctl = $find('ctl00_ctl51_csr'); if (ctl){ ctl.showPrompt(); ctl.setBorder(false);}})" class="form-control allResults ms-textSmall ms-srch-sb-prompt ms-helperText" />
+                                                        <a title="Search" role="button" id="ctl00_ctl51_csr_SearchLink" onclick="EnsureScriptFunc('Search.ClientControls.js', 'Srch.U', function() {$find('ctl00_ctl51_csr').search($get('ctl00_ctl51_csr_sbox').value);})" href="javascript: {}">
+                                                            <i class="fal fa-search allResults t-white f-16">
+                                                            </i>
+                                                        </a>-->
+
+						<!-- ===== STARTER: Search Control ==================================================================================== -->
+
+					<div class="ms-dialogHidden">
+<asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
+</asp:ContentPlaceHolder>
+<div class="ms-webpart-chrome ms-webpart-chrome-fullWidths">
+<div width="100%" class="ms-WPBody noindex " onlyformepart="true" allowdelete="false" style="">
+<div >
+<div id="SearchBox" name="Control">
+<div class="ms-srch-sb ms-srch-sb-border top-search-input-wrapper" id="ctl00_PlaceHolderSearchArea_g_019fb904_b390_4523_a4ed_c9bdeae8cee6_csr_sboxdiv">
+<input type="text" value="Search this site" maxlength="2048" title="Search this site" id="txtSearch" onfocus="if(this.value=='Search this site') this.value='';"
+autocomplete="off" autocorrect="off"
+ class="form-control allResults">
+<a title="Search" role="button" id="SearchLink" onclick="this.href='Search.aspx?k='+document.getElementById('txtSearch').value" href="">
+<i class="fal fa-search allResults t-white f-16"></i>
+</a>
+<!--<div class="ms-qSuggest-container ms-shadow" id="AutoCompContainer">
+<div id="ctl00_PlaceHolderSearchArea_g_019fb904_b390_4523_a4ed_c9bdeae8cee6_csr_AutoCompList"></div></div>-->
+</div>
+</div>
+</div>
+<noscript>
+<div id="ctl00_PlaceHolderSearchArea_g_019fb904_b390_4523_a4ed_c9bdeae8cee6_noscript">It looks like your browser does not have JavaScript enabled. Please turn on JavaScript and try again.</div></noscript><div id="ctl00_PlaceHolderSearchArea_g_019fb904_b390_4523_a4ed_c9bdeae8cee6">
+
+</div>
+<div class="ms-clear"></div>
+</div>
+</div>
+
+
+
+</div>
+         <!-- Close ===== STARTER: Search Control -->
+                                       </div>
+                                                </div>     </div>
+                                            <noscript>
+                                                <div id="ctl00_ctl51_noscript">It looks like your browser does not have JavaScript enabled. Please turn on JavaScript and try again.
+
+
+
+
+                                                </div>
+                                            </noscript>
+                                            <div id="ctl00_ctl51">
+                                            </div>
+                                            <div class="ms-clear">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--<input class="form-control allResults" type="search" placeholder="Enter search term here" aria-label="Search" id="ctl00_SmallSearchInputBox1_csr_sbox"/>
+                                <i class="fal fa-search allResults t-white f-16"><a title="Search" class="ms-srch-sb-searchLink" id="ctl00_SmallSearchInputBox1_csr_SearchLink" href="javascript: {}"></a>
+                                </i>-->
+                            </div>
+                        </div>
+                    		<div class="weather-api">
+			<div class="vertical3">
+				<!-- <img class="icon">
+				      <p class="weather"></p>
+				      <p class="temp"></p> -->
+
+				<p class="whiteLarge">Weather</p>
+				<p class="whiteLarge temp" id="temp"></p>
+
+			</div>
+
+			<img class="icon">
+
+		</div>                        <div class="rel"><a href="https://wesinfo2021dev.westat.com/pages/administrative/security/emergenciesrockvillearea.aspx">
+                            <i class="fas fa-circle whiteColor">
+                            </i>
+                            <i class="fas fa-plus-circle redColor">
+                            </i></a>
+                        </div>
+                    </div>
+                </div>
+                <span class="angle">
+                </span>
+                <span class="right">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                                    <p class="smaller name user">
+                                        <span id="username">
+                                        </span>
+                                    </p>                                                                                                                                                                                                                                                                                                 </a>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </nav>
+
+<!--close custom-->
+		<!-- ===== STARTER: SP IDs / Prefetch SP images / SP Form  =========================================================================== -->
+
+		<SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
+
+		<SharePoint:ImageLink runat="server" />
+
+		<SharePoint:SharePointForm onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}" runat="server">
+
+
+
+		<!-- ===== STARTER: SharePoint Reqs this for adding columns ===================================================== -->
+
+		<script type="text/javascript"> var submitHook = function () { return false; }; theForm._spOldSubmit = theForm.submit; theForm.submit = function () { if (!submitHook()) { this._spOldSubmit(); } }; </script>
+
+
+
+		<!-- ===== STARTER: Web Part Manager  ============================================================================================= -->
+
+		<WebPartPages:SPWebPartManager runat="server"/>
+
+
+
+			<!-- ===== STARTER: ScriptManager ===================================================== -->
+
+			<asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
+
+
+
+			<!-- ===== STARTER: Ribbon Code Starts Here ===================================================== -->
+<div id="ms-designer-ribbon" class="hidden">
+			<PublishingRibbon:PublishingRibbon runat="server"/>
+</div>
+			<!-- ===== STARTER: Ribbon Code Ends Here  ======================================================================================== -->
+
+
+
+			<!-- ===== STARTER: Authentication / Login link hidden for everyone by anonymous users  =========================================== -->
+
+			<SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly"><wssuc:Welcome runat="server" EnableViewState="false" /></SharePoint:SPSecurityTrimmedControl>
+
+
+
+			<!-- ===== STARTER: Main Scrolling Body Starts Here =============================================================================== -->
+
+		  <div id="s4-workspace">
+
+				<div id="s4-bodyContainer">
+
+
+
+				<!-- ===== STARTER: This decides where the web part menu lives ===================================================== -->
+
+				<div id="DeltaPlaceHolderMain" runat="server">
+
+
+
+				<!-- ===== STARTER: style.css adds width and margin =========================================================================================== -->
+
+				<div class="customWidth">
+
+
+
+					<!-- ===== STARTER: SharePoint looks for this div ID s4-titlerow for the "Focus on Content" Button ======================== -->
+
+					<div id="s4-titlerow">
+
+
+
+						<!-- ===== STARTER: Site Logo with link to root =======================================================================
+
+						<div class="ms-dialogHidden">
+
+							<SharePoint:SPLinkButton runat="server" NavigateUrl="~sitecollection/" __designer:Preview="" __designer:Values="&lt;P N=&#39;NavigateUrl&#39; T=&#39;~sitecollection/&#39; /&gt;&lt;P N=&#39;PermissionsString&#39; T=&#39;EmptyMask&#39; /&gt;&lt;P N=&#39;ID&#39; T=&#39;ctl03&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+
+
+
+							</SharePoint:SPLinkButton>
+
+						</div>
+
+						-->
+
+						<!-- ===== STARTER: Global navigation =================================================================================
+
+						<div class="ms-dialogHidden">
+
+							<div class="ms-displayInline ms-core-navigation ms-dialogHidden">
+
+								<PublishingNavigation:PortalSiteMapDataSource ID="topSiteMap" runat="server" EnableViewState="false" SiteMapProvider="GlobalNavigationSwitchableProvider" StartFromCurrentNode="true" StartingNodeOffset="0" ShowStartingNode="false" TrimNonCurrentTypes="Heading" __designer:Preview="&lt;table cellpadding=4 cellspacing=0 style=&quot;font:messagebox;color:buttontext;background-color:buttonface;border: solid 1px;border-top-color:buttonhighlight;border-left-color:buttonhighlight;border-bottom-color:buttonshadow;border-right-color:buttonshadow&quot;&gt;
+              &lt;tr&gt;&lt;td nowrap&gt;&lt;span style=&quot;font-weight:bold&quot;&gt;PortalSiteMapDataSource&lt;/span&gt; - topSiteMap&lt;/td&gt;&lt;/tr&gt;
+              &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;/table&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;topSiteMap&#39; /&gt;&lt;P N=&#39;TrimNonCurrentTypes&#39; E=&#39;32&#39; /&gt;&lt;P N=&#39;ShowStartingNode&#39; T=&#39;False&#39; /&gt;&lt;P N=&#39;SiteMapProvider&#39; T=&#39;GlobalNavigationSwitchableProvider&#39; /&gt;&lt;P N=&#39;StartingNodeUrl&#39; T=&#39;/&#39; /&gt;&lt;P N=&#39;EnableViewState&#39; T=&#39;False&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"/>
+
+								<SharePoint:AspMenu ID="TopNavigationMenu" runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="&lt;%$Resources:wss,navigation_accesskey%&gt;" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="1" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="1" SkipLinkText="" __designer:Preview="&lt;link id=&quot;CssLink-3037fc06eb9b4fd1904aa805a19a9ea0&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/_layouts/15/1033/styles/menu-21.css&quot;/&gt;
+&lt;div id=&quot;zz4_TopNavigationMenu&quot; class=&quot; noindex ms-core-listMenu-horizontalBox&quot;&gt;
+	&lt;ul id=&quot;zz6_RootAspMenu&quot; class=&quot;root ms-core-listMenu-root static&quot;&gt;
+		&lt;li class=&quot;static&quot;&gt;&lt;a class=&quot;static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode&quot; href=&quot;/AccountingandPayroll/Pages/accounting_payroll.aspx&quot; accesskey=&quot;1&quot;&gt;&lt;span class=&quot;additional-background ms-navedit-flyoutArrow&quot;&gt;&lt;span class=&quot;menu-item-text&quot;&gt;AccountingandPayroll&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;static&quot;&gt;&lt;a class=&quot;static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode&quot; href=&quot;/AIB/Pages/index.aspx&quot;&gt;&lt;span class=&quot;additional-background ms-navedit-flyoutArrow&quot;&gt;&lt;span class=&quot;menu-item-text&quot;&gt;AIB&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;static&quot;&gt;&lt;a class=&quot;static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode&quot; title=&quot;Benefits pages&quot; href=&quot;/benefits/Pages/benefitsbrochure.aspx&quot;&gt;&lt;span class=&quot;additional-background ms-navedit-flyoutArrow&quot;&gt;&lt;span class=&quot;menu-item-text&quot;&gt;Benefits&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;static&quot;&gt;&lt;a class=&quot;static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode&quot; href=&quot;/CPC/Pages/index.aspx&quot;&gt;&lt;span class=&quot;additional-background ms-navedit-flyoutArrow&quot;&gt;&lt;span class=&quot;menu-item-text&quot;&gt;CPC&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;static&quot;&gt;&lt;a class=&quot;static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode&quot; href=&quot;/DW/Pages/index.aspx&quot;&gt;&lt;span class=&quot;additional-background ms-navedit-flyoutArrow&quot;&gt;&lt;span class=&quot;menu-item-text&quot;&gt;DW&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;static&quot;&gt;&lt;a class=&quot;static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode&quot; href=&quot;/IRC/Pages/index.aspx&quot;&gt;&lt;span class=&quot;additional-background ms-navedit-flyoutArrow&quot;&gt;&lt;span class=&quot;menu-item-text&quot;&gt;IRC&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;static&quot;&gt;&lt;a class=&quot;static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode&quot; title=&quot;OAsys User Services&quot; href=&quot;/OAsys/Pages/office-automation.aspx&quot;&gt;&lt;span class=&quot;additional-background ms-navedit-flyoutArrow&quot;&gt;&lt;span class=&quot;menu-item-text&quot;&gt;OAsys&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;static&quot;&gt;&lt;a class=&quot;static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode&quot; title=&quot;Open Enrollment Pages&quot; href=&quot;/oeguide/Pages/index.aspx&quot;&gt;&lt;span class=&quot;additional-background ms-navedit-flyoutArrow&quot;&gt;&lt;span class=&quot;menu-item-text&quot;&gt;OEguide&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;static&quot;&gt;&lt;a class=&quot;static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode&quot; title=&quot;Personnel Supervisor Site&quot; href=&quot;/psup/Pages/index.aspx&quot;&gt;&lt;span class=&quot;additional-background ms-navedit-flyoutArrow&quot;&gt;&lt;span class=&quot;menu-item-text&quot;&gt;psup&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;static&quot;&gt;&lt;a class=&quot;static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode&quot; href=&quot;/RStyleGuide/Pages/home.aspx&quot;&gt;&lt;span class=&quot;additional-background ms-navedit-flyoutArrow&quot;&gt;&lt;span class=&quot;menu-item-text&quot;&gt;RStyleGuide&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;static&quot;&gt;&lt;a class=&quot;static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode&quot; href=&quot;/Telecom/Pages/telecomservices.aspx&quot;&gt;&lt;span class=&quot;additional-background ms-navedit-flyoutArrow&quot;&gt;&lt;span class=&quot;menu-item-text&quot;&gt;Telecom&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;static&quot;&gt;&lt;a class=&quot;static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode&quot; href=&quot;/WesQX/Pages/index.aspx&quot;&gt;&lt;span class=&quot;additional-background ms-navedit-flyoutArrow&quot;&gt;&lt;span class=&quot;menu-item-text&quot;&gt;WesQX&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;static ms-verticalAlignTop ms-listMenu-editLink ms-navedit-editArea&quot;&gt;&lt;span class=&quot;ms-navedit-editSpan&quot; id=&quot;zz4_TopNavigationMenu_NavMenu_Edit&quot;&gt;&lt;a id=&quot;zz4_TopNavigationMenu_NavMenu_EditLinks&quot; class=&quot;ms-navedit-editLinksText&quot; href=&quot;#&quot; onclick=&quot;g_QuickLaunchMenu = null; EnsureScriptParams(&amp;#39;quicklaunch.js&amp;#39;, &amp;#39;QuickLaunchInitEditMode&amp;#39;, &amp;#39;zz4_TopNavigationMenu&amp;#39;, 1, 1, 0, &amp;#39;\u002f&amp;#39;); cancelDefault(event); return false;&quot; title=&quot;Edit Links&quot;&gt;&lt;span class=&quot;ms-displayInlineBlock&quot;&gt;&lt;span class=&quot;ms-navedit-editLinksIconWrapper ms-verticalAlignMiddle&quot;&gt;&lt;img class=&quot;ms-navedit-editLinksIcon&quot; src=&quot;/_layouts/15/images/spcommon.png?rev=43#ThemeKey=spcommon&quot; alt=&quot;Edit Links&quot; role=&quot;presentation&quot; /&gt;&lt;/span&gt;&lt;span class=&quot;ms-metadata ms-verticalAlignMiddle&quot;&gt;Edit Links&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span id=&quot;zz4_TopNavigationMenu_NavMenu_Loading&quot; class=&quot;ms-navedit-menuLoading ms-hide&quot;&gt;&lt;a id=&quot;zz4_TopNavigationMenu_NavMenu_GearsLink&quot; href=&quot;#&quot; onclick=&quot;HideGears(); return false;&quot; title=&quot;This animation indicates the operation is in progress. Click to remove this animated image.&quot;&gt;&lt;img id=&quot;zz4_TopNavigationMenu_NavMenu_GearsImage&quot; src=&quot;/_layouts/15/images/loadingcirclests16.gif?rev=43&quot; alt=&quot;This animation indicates the operation is in progress. Click to remove this animated image.&quot; /&gt;&lt;/a&gt;&lt;/span&gt;&lt;div id=&quot;zz4_TopNavigationMenu_NavMenu_ErrorMsg&quot; class=&quot;ms-navedit-errorMsg&quot;&gt;
+
+		&lt;/div&gt;&lt;/span&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;TopNavigationMenu&#39; /&gt;&lt;P N=&#39;UseSimpleRendering&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;AdjustForShowStartingNode&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;MaximumDynamicDisplayLevels&#39; T=&#39;1&#39; /&gt;&lt;P N=&#39;Orientation&#39; E=&#39;0&#39; /&gt;&lt;P N=&#39;SkipLinkText&#39; R=&#39;-1&#39; /&gt;&lt;P N=&#39;DataSourceID&#39; T=&#39;topSiteMap&#39; /&gt;&lt;P N=&#39;SupportsDisabledAttribute&#39; T=&#39;False&#39; /&gt;&lt;P N=&#39;AccessKey&#39; Bound=&#39;True&#39; T=&#39;Resources:wss,navigation_accesskey&#39; /&gt;&lt;P N=&#39;EnableViewState&#39; T=&#39;False&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;RenderingCompatibility&#39; Serial=&#39;AAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uVmVyc2lvbgQAAAAGX01ham9yBl9NaW5vcgZfQnVpbGQJX1JldmlzaW9uAAAAAAgICAgEAAAAAAAAAP//////////Cw&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;" __designer:Templates="&lt;Group Name=&quot;Item Templates&quot;&gt;&lt;Template Name=&quot;StaticItemTemplate&quot; Flags=&quot;D&quot; Content=&quot;&quot; /&gt;&lt;Template Name=&quot;DynamicItemTemplate&quot; Flags=&quot;D&quot; Content=&quot;&quot; /&gt;&lt;/Group&gt;"/>
+
+							</div>
+
+						</div>
+
+						-->
+
+
+
+
+						<!-- ===== STARTER: Breadcrumbs =======================================================================================
+						<div class="ms-dialogHidden">
+
+							<h1 id="pageTitle" class="ms-core-pageTitle">
+
+							<!-- ===== STARTER: SP Reqs DeltaPlaceHolderPageTitleInTitleArea and PlaceHolderPageTitleInTitleArea for adding Apps in Site Content =================== -->
+
+						<!--	<SharePoint:AjaxDelta id="DeltaPlaceHolderPageTitleInTitleArea" runat="server" __designer:Preview="&lt;span id=&quot;ctl00_DeltaPlaceHolderPageTitleInTitleArea&quot;&gt;
+
+
+
+										&lt;span&gt;&lt;/span&gt;
+
+
+
+								&lt;/span&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaPlaceHolderPageTitleInTitleArea&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+
+									<asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server">
+
+										<SharePoint:SPTitleBreadcrumb runat="server" RenderCurrentNodeAsLink="true" SiteMapProvider="SPContentMapProvider" CentralAdminSiteMapProvider="SPXmlAdminContentMapProvider">
+
+											<PATHSEPARATORTEMPLATE>
+
+												<SharePoint:ClusteredDirectionalSeparatorArrow runat="server" />
+
+											</PATHSEPARATORTEMPLATE>
+
+										</SharePoint:SPTitleBreadcrumb>
+
+									</asp:ContentPlaceHolder>
+
+								</SharePoint:AjaxDelta>		-->
+
+
+
+								<div class="ms-displayInlineBlock ms-normalWrap">
+
+									<a href="javascript:;" id="ms-pageDescriptionDiv" style="display:none;">
+
+										<span id="ms-pageDescriptionImage">&#160;</span>
+
+									</a>
+
+									<span class="ms-accessible" id="ms-pageDescription">
+
+										<asp:ContentPlaceHolder id="PlaceHolderPageDescription" runat="server" />
+
+									</span>
+
+									<SharePoint:ScriptBlock runat="server">
+
+										_spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout");
+
+									</SharePoint:ScriptBlock>
+
+								</div>
+
+							</h1>
+
+						</div>
+
+					</div>
+
+
+
+				<!-- ===== STARTER: Body Area (includes left nav and body) ==================================================================== -->
+
+
+
+					<!-- ===== STARTER: Current navigation =========================================================================================== -->
+<div class="container-fluid main-wrapper">
+
+<div id="slideOut2">
+  <div class="slideOutTab">
+    <div id="one" class="openTab bottomShadow" role="button" tabindex="0" aria-label="Contact">
+      <i class="fal fa-edit white mb-3 mt-2"></i>
+      <p class="darkBlue">Feedback</p>
+
+    </div>
+    <div id="two" class="openTab bottomShadow" data-dismiss="modal" aria-controls="right-nav-contact" aria-selected="false" tabindex="0">
+      <i class="fal fa-user-headset white mb-3 mt-2"></i>
+      <p class="darkBlue">Support</p>
+    </div>
+  </div>
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <div class="closeThisPlease" id="close">
+        <p class="whiteLarger text-center changeTitle"><b>We value your feedback!</b></p>
+        <button role="button" class="close" data-dismiss="modal" id="closeThisPlease" tabindex="-1" aria-hidden="false" style="opacity:1" aria-label="Close">
+          ✕
+        </button>
+      </div>
+
+    </div>
+    <div class="modal-body">
+
+      <div class="secondBlock">
+          <fieldset>
+
+            <legend class="white">
+              How would you rate your experience using Wesinfo?
+            </legend>
+
+            <div class="cc-selector d-flex justify-content-center align-items-center">
+              <div class="form-check">
+                <input type="radio" name="Q1" value="1" class="form-check-input" id="Q1_1">
+                <label for="Q1_1" class="form-check-label red">Very Poor</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" name="Q1" value="2" class="form-check-input" id="Q1_2">
+                <label for="Q1_2" class="form-check-label orange">Poor</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" name="Q1" value="3" class="form-check-input" id="Q1_3">
+                <label for="Q1_3" class="form-check-label gold">Average</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" name="Q1" value="4" class="form-check-input " id="Q1_4">
+                <label for="Q1_4" class="form-check-label lime">Good</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" name="Q1" value="5" class="form-check-input" id="Q1_5">
+                <label for="Q1_5" class="form-check-label jellybean">Excellent</label>
+              </div>
+            </div>
+
+            <p class="white mb-1">Comments</p>
+            <textarea name="message" id="message" tabindex="0" aria-hidden="false" rows="7" data-form-field="Message" class="textArea"></textarea>
+
+            <button type="submit" class="btn btn-info button-outlined" id="sendMessage" tabindex="0" aria-hidden="false" onclick="sendFeedback();">
+              <i class="fal fa-envelope brightBlue"></i>&nbsp;Send
+              <div class="buttonOverlay"></div>
+            </button>
+
+
+          </fieldset>
+
+
+
+      </div>
+
+      <div class="row firstBlock hide1">
+        <div class="col-xs-12 col-lg-12">
+          <div id="accordion" class="participant-page">
+            <div class="card faq-list">
+              <a class="card-link card-header ques" data-toggle="collapse" href="#collapseOne">
+                What if I can’t find what I’m looking for in the menu?
+                <span class="caret-down"><i class="fal fa-angle-down white"></i></span>
+              </a>
+              <div id="collapseOne" class="collapse" data-parent="#accordion">
+                <div class="card-body ans">
+                  <p class="white">Select the type of news (General, Training, or Opportunities) or use the dropdown to see a list of additional categories. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi sem.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="card faq-list">
+              <a class="card-link card-header ques" data-toggle="collapse" href="#collapseTwo">
+                Can I personalize my view?
+                <span class="caret-down"><i class="fal fa-angle-down white"></i></span>
+              </a>
+              <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                <div class="card-body ans">
+                  <p class="white">Select the type of news (General, Training, or Opportunities) or use the dropdown to see a list of additional categories. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi sem.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card faq-list">
+              <a class="card-link card-header ques" data-toggle="collapse" href="#collapseThree">
+                How do I see different types of news?
+                <span class="caret-down"><i class="fal fa-angle-down white"></i></span>
+              </a>
+              <div id="collapseThree" class="collapse" data-parent="#accordion">
+                <div class="card-body ans">
+                  <p class="white">Select the type of news (General, Training, or Opportunities) or use the dropdown to see a list of additional categories. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi sem.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card faq-list">
+              <a class="card-link card-header ques" data-toggle="collapse" href="#collapseFour">
+                How do I get something added to WesInfo?
+                <span class="caret-down"><i class="fal fa-angle-down white"></i></span>
+              </a>
+              <div id="collapseFour" class="collapse" data-parent="#accordion">
+                <div class="card-body ans">
+                  <p class="white">Select the type of news (General, Training, or Opportunities) or use the dropdown to see a list of additional categories. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi sem.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card faq-list">
+              <a class="card-link card-header ques" data-toggle="collapse" href="#collapseFive">
+                What if I need technical help?
+                <span class="caret-down"><i class="fal fa-angle-down white"></i></span>
+              </a>
+              <div id="collapseFive" class="collapse" data-parent="#accordion">
+                <div class="card-body ans">
+                  <p class="white">Select the type of news (General, Training, or Opportunities) or use the dropdown to see a list of additional categories. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi sem.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="d-flex justify-content-center whiteBottom"><p class="white mb-3 mt-3">Call PC Help at 301-251-4292</p></div>
+
+
+            <fieldset>
+
+              <legend class="white mb-3">
+                Can’t find the answers you looking for? Send us your question.
+              </legend>
+
+
+              <div class="d-flex justify-content-around align-items-center flex-wrap mt-3">
+
+                <div class="form-check oneQuestion ">
+
+                  <input id="answer1" type="radio" name="time" value="General" class="form-check-input">
+                  <label class="rainbow form-check-label" for="answer1"><p class="oneBlack">General</p></label>
+
+                </div>
+                <div class="form-check oneQuestion ">
+
+                  <input id="answer2" type="radio" name="time" value="PC Help" class="form-check-input">
+                  <label class="rainbow form-check-label" for="answer2"><p class="oneBlack">PC Help</p></label>
+
+                </div>
+                <div class="form-check oneQuestion ">
+
+                  <input id="answer3" type="radio" name="time" value="Content" class="form-check-input">
+                  <label class="rainbow form-check-label" for="answer3"><p class="oneBlack">Content</p></label>
+
+                </div>
+
+
+  </div>
+
+
+
+  <textarea name="messageContact" id="messageContact" tabindex="0" aria-hidden="false" rows="7" data-form-field="Message" class="textArea2"></textarea>
+
+  <button type="submit" class="btn btn-info button-outlined" id="sendMessage2" tabindex="0" aria-hidden="false" onclick="sendContactUs();">
+    <i class="fal fa-envelope brightBlue"></i>&nbsp;Send
+    <div class="buttonOverlay"></div>
+  </button>
+
+
+
+
+</fieldset>
+
+
+
+</div>
+</div>
+
+
+
+
+
+</div>
+<div class="modal-footer">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="contactUsOverlay"></div>
+<div class="rel outer" id="outer">
+<div class="stickyBar">
+			<div class="rel" tabindex="0">
+			<div class="corresponding">
+								<div class="directory">
+						<!--<form>-->
+							<legend>
+								<p>411 Directory Staff</p>
+							<p></p>
+						</legend>
+						<div class="form-group">
+
+							<label for="lastName">Last Name</label>
+							<input type="text" class="form-control" id="lastName" aria-label="searchLastName" placeholder="">
+
+						</div>
+
+						<div class="form-group">
+							<label for="firstName">First Name</label>
+							<input type="text" class="form-control" id="firstName" aria-label="searchFirstName" placeholder="">
+
+						</div>
+						<div class="horizontal mt1">
+							<a class="advancedSearch tealFont" href="" onclick="peopleAdvanced()">Advanced</a>
+							<a class="search tealBubble smallerBubble" href="" onclick="peopleSearch()">Search</a>
+						</div>
+					<!--</form>-->
+				</div>
+			</div>
+			<img src="https://wesinfo2021dev.westat.com/siteassets/images/Group-1.svg">
+
+		</div>
+		<div class="rel" tabindex="0">
+      <a href="https://timesheet.westat.com" target="_blank">
+			<div class="corresponding">
+				<div class="timesheets">
+					<p>Access Deltek Timesheets</p>
+				</div>
+			</div>
+			<img src="https://wesinfo2021dev.westat.com/siteassets/images/Group.svg">
+</a>
+		</div>
+
+		<div class="rel" tabindex="0">
+			<div class="corresponding">
+				<div class="projects">
+					<p>Project Number Look-Up</p>
+				</div>
+			</div>
+			<img src="https://wesinfo2021dev.westat.com/siteassets/images/Group-3.svg">
+
+		</div>
+
+		<div class="rel" tabindex="0">
+			<a href="https://www.compliancewire.com/partners/westat/westat" target="_blank"><div class="corresponding">
+				<div class="lms">
+					<p>LMS</p>
+				</div>
+			</div>
+			<img src="https://wesinfo2021dev.westat.com/siteassets/images/Group-2.svg">
+</a>
+
+		</div>
+
+		<div class="rel" tabindex="0">
+			<div class="corresponding">
+				<div class="forms">
+
+					<p class="top">Forms</p>
+					<ul class="largeBullets">
+
+						<li class="tealFont">Corportate Marketing Materials Request&nbsp;<i class="fal fa-file-pdf"></i></li>
+						<li class="tealFont">401(k) Participant Contribution Change Form&nbsp;<i class="fal fa-file-pdf"></i></li>
+						<li class="tealFont">Remote User Access Request&nbsp;<i class="fal fa-file-pdf"></i></li>
+						<li class="tealFont">Pledge of Confidentiality of Survey Data (Assurance Statement)&nbsp;<i class="fal fa-file-pdf"></i></li>
+						<li class="tealFont">Business Size Self-Certification Form&nbsp;<i class="fal fa-file-pdf"></i></li>
+
+					</ul>
+
+					<p class="tealFont text-center">View All</p>
+
+				</div>
+
+			</div>
+			<img src="https://wesinfo2021dev.westat.com/siteassets/images/forms-icon.svg">
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- Left Nav -->
+<div class="row">
+<div class="col-lg-2 col-md-12 col-sm-12 leftSideNav">
+	<div class="position-relative">
+		<div class="side-menu-container">
+							<div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList">
+
+						<div class="ms-core-navigation">
+
+							<!-- ===== STARTER: SP Reqs PlaceHolderLeftNavBar for adding Apps in Site Content =================== -->
+
+							<asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server">
+
+								<asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarTop" runat="server">
+
+									<!-- ===== STARTER: hide the quick launch for any page the doesn't override the PlaceHolderLeftNavBar ============ -->
+
+									<!-- ===== STARTER: if you want the navigation back you can add it from the collab master ============
+									<style type="text/css">
+
+										#contentBox { margin-left: 0; }
+
+										#sideNavBox { display: none; }
+
+									</style>
+
+								</asp:ContentPlaceHolder>-->
+
+
+								<asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchTop" runat="server" />
+
+								<asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarDataSource" runat="server" />
+
+
+								<asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
+
+								<asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
+
+                        <div class="ms-core-sideNavBox">
+                            <SharePoint:SPNavigationManager id="QuickLaunchNavigationManager" runat="server" QuickLaunchControlId="V4QuickLaunchMenu" ContainedControl="QuickLaunch" EnableViewState="false">
+                            <SharePoint:delegatecontrol runat="server" ControlId="QuickLaunchDataSource">
+
+
+
+
+
+
+                            <Template_Controls>
+                            <asp:SiteMapDataSource SiteMapProvider="SPNavigationProvider" ShowStartingNode="False" id="QuickLaunchSiteMap" StartingNodeUrl="sid:1025" runat="server" />
+                            </Template_Controls>
+                            </SharePoint:delegatecontrol>
+							<SharePoint:aspmenu id="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceId="QuickLaunchSiteMap" UseSimpleRendering="true" Orientation="Vertical" StaticDisplayLevels="3" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="0" SkipLinkText="" />
+                            </SharePoint:SPNavigationManager>
+                            <SharePoint:SPNavigationManager id="TreeViewNavigationManagerV4" runat="server" ContainedControl="TreeView" CssClass="ms-tv-box">
+                            <SharePoint:SPLinkButton runat="server" NavigateUrl="~site/_layouts/15/viewlsts.aspx" id="idNavLinkSiteHierarchyV4" Text="&lt;%$Resources:wss,treeview_header%&gt;" accesskey="&lt;%$Resources:wss,quiklnch_allcontent_AK%&gt;" CssClass="ms-tv-header" />
+                            <SharePoint:DelegateControl runat="server" ControlId="TreeViewAndDataSource">
+                            <Template_Controls>
+                            <SharePoint:SPHierarchyDataSourceControl runat="server" id="TreeViewDataSourceV4" RootContextObject="Web" IncludeDiscussionFolders="true" />
+                            <SharePoint:SPRememberScroll runat="server" id="TreeViewRememberScrollV4" onscroll="javascript:_spRecordScrollPositions(this);" style="overflow: auto;">
+                            <SharePoint:SPTreeView id="WebTreeViewV4" runat="server" ShowLines="false" DataSourceId="TreeViewDataSourceV4" ExpandDepth="0" SelectedNodeStyle-CssClass="ms-tv-selected" NodeStyle-CssClass="ms-tv-item" SkipLinkText="" NodeIndent="12" ExpandImageUrl="/_layouts/15/images/tvclosed.png?rev=43" ExpandImageUrlRtl="/_layouts/15/images/tvclosedrtl.png?rev=43" CollapseImageUrl="/_layouts/15/images/tvopen.png?rev=43" CollapseImageUrlRtl="/_layouts/15/images/tvopenrtl.png?rev=43" NoExpandImageUrl="/_layouts/15/images/tvblank.gif?rev=43">
+                            </SharePoint:SPTreeView>
+                            </SharePoint:SPRememberScroll>
+                            </Template_Controls>
+                            </SharePoint:DelegateControl>
+                            </SharePoint:SPNavigationManager>
+                            <asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" runat="server">
+							<div class="ms-core-listMenu-verticalBox">
+                                <SharePoint:ClusteredSPLinkButton runat="server" id="idNavLinkViewAll" PermissionsString="ViewFormPages" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="&lt;%$Resources:wss,AllSiteContentMore%&gt;" ToolTip="&lt;%$Resources:wss,AllSiteContentMore%&gt;" accesskey="&lt;%$Resources:wss,quiklnch_allcontent_AK%&gt;" CssClass="ms-core-listMenu-item ms-core-listMenu-heading"/>
+
+                            </div>
+                            </asp:ContentPlaceHolder>
+                        </div>
+
+                        </asp:ContentPlaceHolder>
+                        </SharePoint:AjaxDelta>
+
+
+
+						</div>
+
+					</div>
+
+		</div>
+	</div>
+</div>
+<!--close left nav-->
+
+
+
+					<!-- ===== STARTER: Main Content ========================================================================================== -->
+<div class="col-lg-10 col-md-12 col-sm-12 paddingLeft3 middleNav main-part">
+
+							<!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
+
+							<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
+
+</div>
+</div>
+
+</div>
+	</div>
+</div>
+			<div style="clear:both;" />
+
+
+
+<footer>
+            <div class="footer-wrapper">
+                <div class="d-flex justify-content-start align-items-center">
+                    <a href="https://www.westat.com" target="_blank" title="Visit website">
+                        <img src="../../siteassets/images/footer_westat_logo.svg" alt="Westat Home page" title="Westat" class="img-wes-logo" />
+                    </a>
+                    <div class="social  d-flex justify-content-between">
+                        <a href="https://www.facebook.com/westat.hq" class="plain" target="_blank">
+                            <div class="rel">
+                                <i class="fas fa-circle">
+                                </i>
+                                <i class="fab fa-facebook-f">
+                                </i>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/company/westat" class="plain" target="_blank">
+                            <div class="rel">
+                                <i class="fas fa-circle">
+                                </i>
+                                <i class="fab fa-linkedin-in">
+                                </i>
+                            </div>
+                        </a>
+                        <a href="https://twitter.com/westat" class="plain" target="_blank">
+                            <div class="rel">
+                                <i class="fas fa-circle">
+                                </i>
+                                <i class="fab fa-twitter">
+                                </i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex flex-column align-items-end">
+                    <div class="d-flex justify-content-around align-items-center">
+                        <p class="t-white smaller">Need help? Call the PC HelpDesk at (301) 251-4292.
+
+
+
+
+
+
+
+
+
+                        </p>
+                        <div class="flipTwo">
+                        </div>
+                        <p class="t-white smaller">Have feedback? Share your thoughts here!
+
+
+
+
+
+
+
+
+
+                        </p>
+                    </div>
+                    <p class="t-white smaller">©1996- 2020 Westat Inc. All rights reserved.
+
+
+
+
+
+
+
+
+
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+				</div>
+
+				</div>
+
+			</div>
+
+			</div>
+
+			<!-- ===== STARTER: Main Scrolling Body Ends Here ================================================================================= -->
+
+
+
+			<!-- ===== STARTER: Needed for form stuff ========================================================================================= -->
+
+			<asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server">
+
+				<SharePoint:formdigest runat="server"/>
+
+			</asp:ContentPlaceHolder>
+
+
+
+			<!-- ===== STARTER: Hidden Placeholders =========================================================================================== -->
+
+			<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTopNavBar" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSiteName" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageImage" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderMiniConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderNavSpacer" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" />
+
+
+
+		</SharePoint:SharePointForm>
+
+
+
+		<!-- ===== STARTER: Adds extra stuff like another form for Survey management ====================================================== -->
+
+		<asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server"/>
+
+        <SharePoint:ScriptLink language="javascript" name="~siteCollection/SiteAssets/vendorlibs/jquery.min.js" runat="server" Localizable="false"/>
+        <SharePoint:ScriptLink language="javascript" name="~siteCollection/SiteAssets/vendorlibs/bootstrap/js/bootstrap.min.js" runat="server" Localizable="false"/>
+        <SharePoint:ScriptLink language="javascript" name="~siteCollection/SiteAssets/js/index.js" runat="server" Localizable="false"/>
+
+	</body>
+
+</SharePoint:SPHtmlTag>

@@ -5606,3 +5606,16 @@ max-width: 9em;
       left: calc(50% - 7em);
     }
   }
+
+/* new sharepoint edits */
+
+main {
+    position: relative;
+    padding: 0em 4em 2em 4em;
+}
+#slideOut2 {
+
+    right: -558px;
+  }
+
+  /* end new sharepoint edits */

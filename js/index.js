@@ -203,10 +203,6 @@ $('.communication-icon').parent().mouseleave(function() {
 
 
 
-
-
-
-
 	$('#slideOut2 .modal-header a').attr('tabindex', '-1')
 
 	var open = function() {

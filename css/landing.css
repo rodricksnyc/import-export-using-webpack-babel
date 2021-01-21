@@ -1089,7 +1089,7 @@ footer {
   bottom: 0px;
   left: 0px;
   width: 100%;
-  min-height: 6rem;
+  min-height: 7rem;
 }
 
 .img-wes-logo {
@@ -1137,7 +1137,7 @@ footer {
 
 .footer-wrapper {
 
-  padding: 2em 2em 0em 2em;
+  padding: 1em 2em 0em 2em;
   display: flex;
   justify-content: space-between;
   align-items:center
@@ -1173,7 +1173,7 @@ h1, h2, h3, h4, h5, h6, p, a, li {
   font-weight: 100;
   font-size: 2.5rem;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+
 }
 
 .dropdown-toggle::after {
@@ -2111,6 +2111,11 @@ left:-2%
 }
 
 #slideOut2 ::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::-webkit-scrollbar {
   width: 0px;
   background: transparent;
 }
@@ -3055,7 +3060,7 @@ font-size: 15px !important;
 
 .tableOfContents{
   background: #e6f7f5;
-  margin-bottom:1em
+  margin:1.5em 0em
 }
 
 .ml1{
@@ -3139,7 +3144,10 @@ a.aqua {
   color:#0e7b9b !important;
 }
 
+.grayBottom  a.aqua {
+     font-size: 16px;
 
+   }
 
 .light{
   color:#0e7b9b;
@@ -3718,7 +3726,20 @@ p.info:before {
   text-decoration: underline;
 }
 
+ p.aquaCaret{
+  font-size:18px;
+}
 
+
+.main-part ul.circle li{
+  list-style-type:disc !important;
+}
+
+
+.main-part ul.circle li:before {
+
+content: ""
+}
 
 
 .main-part  a:hover .whiteBubble p {
@@ -3734,7 +3755,15 @@ p.info:before {
   line-height: 1.5;
 }
 
+.main-part ul.noBullets{
+  list-style-type: none
+}
 
+
+.main-part ul.noBullets li:before {
+
+content: ""
+}
 
 .main-part h1{
 
@@ -4432,7 +4461,7 @@ a.icon strong {
 }
 
 .grayBottom{
-  border-bottom: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6 !important;
   padding: 1em 0em;
 }
 
@@ -5343,7 +5372,7 @@ max-width: 9em;
   }
   #slideOut2 legend {
     padding: 0 !important;
-    width: 0% !important;
+    width: 100% !important;
     padding: 0 !important;
     margin-bottom: 0px !important;
     font-size: 18px !important;
@@ -5506,14 +5535,18 @@ max-width: 9em;
     border: 1px solid white;
     content: "";
     height: 18px;
+
     left: 0;
     position: absolute;
     top: 3px;
     width: 18px;
+
     border-radius: 50%;
     padding: 6px;
     background: white;
   }
+
+
 
   #slideOut2 .firstBlock .form-check.oneQuestion input + label::after {
     content: "";
@@ -5527,6 +5560,9 @@ max-width: 9em;
     height: 12px;
     transition: opacity 0.2s ease-in-out;
   }
+
+
+
 
   /* .openTab.showIt {
   right: 520px !important;
@@ -5647,7 +5683,9 @@ max-width: 9em;
 
   .cc-selector  {
     position: relative;
-    margin-bottom:3em;
+    margin-bottom: 2em;
+    margin-top: 1em;
+
   }
 
   .cc-selector input[type="radio"]:checked + label {
@@ -6142,3 +6180,165 @@ max-width: 9em;
       left: calc(50% - 7em);
     }
   }
+
+
+  /* new sharepoint edits */
+  /* .timesheets {
+    right: -110px;
+}
+
+.projects{
+  right: -114px;
+}
+
+.lms{
+      right: -113px;
+}
+
+  #slideOut2 .firstBlock .form-check.oneQuestion input + label::before {
+    border: 1px solid white;
+    content: "";
+    height: 4px;
+    left: 0;
+    position: absolute;
+    top: 3px;
+    width: 4px;
+    border-radius: 50%;
+    padding: 6px;
+    background: white;
+}
+
+  #slideOut2 .firstBlock .form-check.oneQuestion input + label::after {
+    content: "";
+    opacity: 0;
+    border: 7px solid #0E7B9B;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 5px;
+    width: 0px;
+    height: 0px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+  main {
+      position: relative;
+      padding: 0em 4em 2em 4em;
+  }
+ #slideOut2 {
+
+      right: -558px;
+    }
+
+    #s4-workspace {
+    overflow: auto !important;
+    position: relative !important;
+    overflow-x: hidden !important;
+    width: 100% !important;
+    height: calc(100vh - 7vh) !important
+}
+#s4-bodyContainer {
+    padding-bottom: 0px !important;
+}
+
+ .row {
+    margin-top: 0px;
+}
+
+#zz12_RootAspMenu > li > a::after {
+    font-family: "Font Awesome 5 Pro" !important;
+    content: '\f107';
+    font-weight: 900;
+    position: absolute;
+    right: 19px;
+    top: unset !important;
+}
+
+.ms-core-listMenu-verticalBox > .ms-core-listMenu-item, .ms-core-listMenu-verticalBox li.static > .ms-core-listMenu-item {
+    display: block;
+    padding: 0;
+    line-height: 1;
+    font-weight: 500;
+
+    width: auto;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.ms-core-listMenu-verticalBox li.static > ul.static > li.static > .ms-core-listMenu-item {
+    padding-left: 5px;
+    font-size: 15px;
+  }
+
+  #zz12_RootAspMenu > li > ul > li:nth-child(1) {
+   border-top: none !important;
+   width: auto !important;
+   border-top-right-radius: 0rem !important;
+   padding-top: 10px !important;
+   padding-right: 0px !important;
+
+   padding-left: 5px !important;
+}
+
+#zz12_RootAspMenu > li > ul > li.static {
+
+ width: auto !important;
+
+ padding-top: 10px !important;
+ padding-right: 0px !important;
+
+ padding-left: 5px !important;
+ padding:.2em  !important
+}
+
+li > a.ms-core-listMenu-item.ms-core-listMenu-selected:hover, li > a.ms-core-listMenu-item:hover, li > a.ms-core-listMenu-item:active {
+
+    background-color: transparent !important;
+}
+
+#zz11_V4QuickLaunchMenu li.static {
+    background: white;
+    width: 100%;
+    position: relative;
+    padding: 1.4em 2em 1.4em 0.6em !important;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin-bottom: 0px;
+    box-shadow: 0px 4px 20px rgba(0, 70, 127, 0.2);
+    min-height: 1em !important;
+    font-size: 16px !important;
+    margin: 0.5em 0em;
+        vertical-align: middle;
+}
+
+#slideOut2 button.close {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    margin: -1rem -4.6rem -1rem auto !important;
+}
+#slideOut2 textarea {
+    margin-bottom: 1em;
+}
+
+
+.itemsContainerWrapperContainer_e1a6c66b .itemsContainerWrapperTitle_e1a6c66b {
+
+    padding-top: 0px !important;
+    margin-top: -1em !important;
+}
+
+.spPropertyPaneContainerNoFlexbox{
+  z-index: 99999999 !important
+}
+
+.ms-ToolPaneOuter {
+
+    z-index: 9999999999 !important;
+    position: relative !important;
+} */
+
+
+    /* end new sharepoint edits */

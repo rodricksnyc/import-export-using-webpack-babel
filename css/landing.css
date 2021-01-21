@@ -2506,7 +2506,7 @@ h4 {
 
 main {
   position: relative;
-  padding:2em 4em
+  padding:0em 4em 2em 4em
 }
 .padding-0 {
   padding: 0em !important;
@@ -2789,7 +2789,7 @@ li {
 
 main {
   position: relative;
-  padding:2em 4em
+  padding:0em 4em 2em 4em
 }
 .padding-0 {
   padding: 0em !important;

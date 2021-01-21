@@ -1870,6 +1870,7 @@ position: absolute;
   top: 75px;
   display: none;
   z-index: 10;
+  box-shadow: 0px 14px 43px -11px rgba(0,0,0,0.5);
 }
 
 
@@ -3684,7 +3685,7 @@ p.info:before {
   padding-left:5px;
 }
 
-.main-part .whiteBubble
+
 
 .main-part  .whiteBubble a:hover i{
   text-decoration: none !important
@@ -3695,7 +3696,10 @@ p.info:before {
   line-height: 1.8;
 }
 
-.main-part .whiteBubble
+.main-part p.darkBlue {
+  margin-bottom:.2rem !important;
+  margin-top:1rem !important
+}
 
 .mail.margin-after{
 
@@ -3705,14 +3709,14 @@ p.info:before {
     color: #00467f !important;
     font-size: 26px !important;
     font-weight: 600;
-    margin:.5em 0em;
+    margin:1em 0em .5em 0em !important;
 }
 
 .main-part h3 {
     color: #00467f !important;
     font-size: 22px !important;
     font-weight: 600;
-    margin:.5em 0em;
+  margin:1em 0em .2em 0em !important;
 }
 
 
@@ -4650,7 +4654,7 @@ width: 50%;
 }
 
 .tab-pane {
-  max-height: 31rem;
+  max-height: 30rem;
 
   overflow-x: hidden;
   overflow-y: auto;

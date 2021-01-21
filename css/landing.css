@@ -5086,6 +5086,15 @@ max-width: 9em;
     outline: none;
     cursor: pointer;
   }
+  .popover-block-container .popover-icon:after{
+      content: "\f05a";
+      font-family: "Font Awesome 5 Pro" !important;
+      color: #04a0b2;
+      font-weight:300 !important;
+  }
+
+
+
   .popover-block-container .popover-icon i {
     color: #04a0b2;
     text-align: center;

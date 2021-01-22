@@ -1574,7 +1574,7 @@ padding-left: 760%;
 
 .navbar-nav  .dropdown-menu {
   left: 118%;
-  top: 1px;
+  top: 1px !important;
   display: block;
   visibility: hidden;
   opacity: 0;

@@ -3678,6 +3678,10 @@ p.info:before {
 }
 
 
+.main-part .card-body {
+  padding-top:.5em
+}
+
 .main-part .card.logoAccordion h3{
 
   width:50%
@@ -3692,7 +3696,7 @@ p.info:before {
   position: absolute;
   right: 4em;
   max-width: 15em;
-  top: -30%;
+  top: -45%;
 
 }
 

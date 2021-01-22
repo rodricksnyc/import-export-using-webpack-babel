@@ -3696,6 +3696,12 @@ p.info:before {
 
 }
 
+.main-part .card.bannerAccordion img.banner-accordion{
+
+width:100vw
+
+}
+
 
 .main-part .card {
   padding: .6em;

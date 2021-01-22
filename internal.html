@@ -609,11 +609,13 @@
 									<a href="#" class="dropdown-item" type="button">Accounting & Finance</a>
 									<a href="#" class="dropdown-item" type="button">Business Development & Marketing
 									</a>
+									<a href="#" class="dropdown-item" type="button">Facilities</a>
 									<a href="#" class="dropdown-item" type="button">Field Services</a>
-									<a href="#" class="dropdown-item" type="button">Human Resources Services</a>
-									<a href="#" class="dropdown-item" type="button">Information Technology</a>
-									<a href="#" class="dropdown-item" type="button">Operations</a>
+									<a href="#" class="dropdown-item" type="button">Human Resource Services</a>
+								  <a href="#" class="dropdown-item" type="button">Information Technology</a>
+
 									<a href="#" class="dropdown-item" type="button">Research Operations Services (ROS)</a>
+									<a href="#" class="dropdown-item" type="button">Security Services</a>
 
 								</div>
 							</li>
@@ -790,6 +792,221 @@
 </nav>
 
 <div class="container-fluid main-wrapper">
+
+	<div id="slideOut2">
+		<div class="slideOutTab">
+			<div id="one" class="openTab bottomShadow" role="button" tabindex="0" aria-label="Contact">
+				<i class="fal fa-edit white mb-3 mt-2"></i>
+				<p class="darkBlue">Feedback</p>
+
+			</div>
+			<div id="two" class="openTab bottomShadow" data-dismiss="modal" data-toggle="tab" aria-controls="right-nav-contact" aria-selected="false" tabindex="0">
+				<i class="fal fa-user-headset white mb-3 mt-2"></i>
+				<p class="darkBlue">Support</p>
+			</div>
+		</div>
+
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="closeThisPlease" id="close">
+					<p class="whiteLarger text-center changeTitle"><b>We value your feedback!</b></p>
+					<button role="button" class="close" data-dismiss="modal" id="closeThisPlease" tabindex="-1" aria-hidden="false" style="opacity:1" aria-label="Close">
+						&#10005;
+					</button>
+				</div>
+
+			</div>
+			<div class="modal-body">
+
+				<div class="secondBlock">
+					<form method="post" data-form-title="ratings">
+						<fieldset>
+
+							<legend class="white">
+								How would you rate your experience using Wesinfo?
+							</legend>
+
+							<div class="cc-selector d-flex justify-content-center align-items-center">
+								<div class="form-check">
+									<input type="radio" name="Q1" value="1" class="form-check-input" id="Q1_1">
+									<label for="Q1_1" class="form-check-label red">Very Poor</label>
+								</div>
+								<div class="form-check">
+									<input type="radio" name="Q1" value="2" class="form-check-input" id="Q1_2">
+									<label for="Q1_2" class="form-check-label orange">Poor</label>
+								</div>
+								<div class="form-check">
+									<input type="radio" name="Q1" value="3" class="form-check-input" id="Q1_3">
+									<label for="Q1_3" class="form-check-label gold">Average</label>
+								</div>
+								<div class="form-check">
+									<input type="radio" name="Q1" value="4" class="form-check-input " id="Q1_4">
+									<label for="Q1_4" class="form-check-label lime">Good</label>
+								</div>
+								<div class="form-check">
+									<input type="radio" name="Q1" value="5" class="form-check-input" id="Q1_5">
+									<label for="Q1_5" class="form-check-label jellybean">Excellent</label>
+								</div>
+							</div>
+
+							<p class="white mb-1">Comments</p>
+							<textarea name="message" tabindex="0" aria-hidden="false" required="true" rows="7" data-form-field="Message" class="textArea"></textarea>
+
+							<button type="submit" class="btn btn-info button-outlined" id="sendMessage" tabindex="0" aria-hidden="false">
+								<i class="fal fa-envelope brightBlue"></i>&nbsp;Send
+								<div class="buttonOverlay"></div>
+							</button>
+
+
+						</fieldset>
+					</form>
+
+
+				</div>
+
+				<div class="row firstBlock hide1">
+					<div class="col-xs-12 col-lg-12">
+						<div id="accordion" class="participant-page">
+							<div class="card faq-list">
+								<a class="card-link card-header ques" data-toggle="collapse" href="#collapseOne" >
+									What if I can’t find what I’m looking for in the menu?
+									<span class="caret-down"><i class="fal fa-angle-down white"></i></span>
+								</a>
+								<div id="collapseOne" class="collapse" data-parent="#accordion">
+									<div class="card-body ans">
+										<p class="white">Select the type of news (General, Training, or Opportunities) or use the dropdown to see a list of additional categories. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi sem.</p>
+
+									</div>
+								</div>
+							</div>
+							<div class="card faq-list">
+								<a class="card-link card-header ques" data-toggle="collapse" href="#collapseTwo">
+									Can I personalize my view?
+									<span class="caret-down"><i class="fal fa-angle-down white"></i></span>
+								</a>
+								<div id="collapseTwo" class="collapse" data-parent="#accordion">
+									<div class="card-body ans">
+										<p class="white">Select the type of news (General, Training, or Opportunities) or use the dropdown to see a list of additional categories. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi sem.</p>
+									</div>
+								</div>
+							</div>
+							<div class="card faq-list">
+								<a class="card-link card-header ques" data-toggle="collapse" href="#collapseThree">
+									How do I see different types of news?
+									<span class="caret-down"><i class="fal fa-angle-down white"></i></span>
+								</a>
+								<div id="collapseThree" class="collapse" data-parent="#accordion">
+									<div class="card-body ans">
+										<p class="white">Select the type of news (General, Training, or Opportunities) or use the dropdown to see a list of additional categories. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi sem.</p>
+									</div>
+								</div>
+							</div>
+							<div class="card faq-list">
+								<a class="card-link card-header ques" data-toggle="collapse" href="#collapseFour">
+									How do I get something added to WesInfo?
+									<span class="caret-down"><i class="fal fa-angle-down white"></i></span>
+								</a>
+								<div id="collapseFour" class="collapse" data-parent="#accordion">
+									<div class="card-body ans">
+										<p class="white">Select the type of news (General, Training, or Opportunities) or use the dropdown to see a list of additional categories. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi sem.</p>
+									</div>
+								</div>
+							</div>
+							<div class="card faq-list">
+								<a class="card-link card-header ques" data-toggle="collapse" href="#collapseFive">
+									What if I need technical help?
+									<span class="caret-down"><i class="fal fa-angle-down white"></i></span>
+								</a>
+								<div id="collapseFive" class="collapse" data-parent="#accordion">
+									<div class="card-body ans">
+										<p class="white">Select the type of news (General, Training, or Opportunities) or use the dropdown to see a list of additional categories. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi sem.</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="d-flex justify-content-center whiteBottom"><p class="white mb-3 mt-3">Call PC Help at 301-251-4292</p></div>
+
+						<form method="post" data-form-title="CONTACT US">
+							<fieldset>
+
+								<legend class="white mb-3">
+									Can’t find the answers you looking for? Send us your question.
+								</legend>
+
+
+								<div class="d-flex justify-content-around align-items-center flex-wrap mt-3">
+
+									<div class="form-check oneQuestion ">
+
+										<input id="answer1" type="radio" name="time" value="" class="form-check-input">
+										<label class="rainbow form-check-label" for="answer1"><p class="oneBlack">General</p></label>
+
+									</div>
+									<div class="form-check oneQuestion ">
+
+										<input id="answer2" type="radio" name="time" value="" class="form-check-input">
+										<label class="rainbow form-check-label" for="answer2"><p class="oneBlack">PC Help</p></label>
+
+									</div>
+									<div class="form-check oneQuestion ">
+
+										<input id="answer3" type="radio" name="time" value="" class="form-check-input">
+										<label class="rainbow form-check-label" for="answer3"><p class="oneBlack">Content</p></label>
+
+									</div>
+									<!-- <div class="vertical">
+
+									<label class="radio-inline white">
+									<input type="radio" name="optradio" class="" tabindex="0" aria-hidden="false" id="general-inquiry" checked="" required="">General
+								</label>
+							</div>
+							<div class="vertical">
+
+							<label class="radio-inline white">
+							<input type="radio" name="optradio" class="" tabindex="0" aria-hidden="false">PC Help
+						</label>
+					</div>
+					<div class="vertical white">
+
+					<label class="radio-inline">
+					<input type="radio" name="optradio" class="" tabindex="0" aria-hidden="false">Content
+				</label>
+			</div> -->
+
+		</div>
+
+
+
+		<textarea name="message" tabindex="0" aria-hidden="false" required="true" rows="7" data-form-field="Message" class="textArea2"></textarea>
+
+		<button type="submit" class="btn btn-info button-outlined" id="sendMessage2" tabindex="0" aria-hidden="false">
+			<i class="fal fa-envelope brightBlue"></i>&nbsp;Send
+			<div class="buttonOverlay"></div>
+		</button>
+
+
+
+
+	</fieldset>
+</form>
+
+
+</div>
+</div>
+
+
+
+
+
+</div>
+<div class="modal-footer">
+
+</div>
+
+</div>
+
+</div>
 
 	<div class="contactUsOverlay"></div>
 	<div class="rel outer" id="outer">

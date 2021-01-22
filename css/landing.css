@@ -3700,6 +3700,12 @@ p.info:before {
 margin-top:0em !important
 }
 
+@media (max-width:991px){
+  .main-part .employeeSpotlight h3{
+  margin-top:1em !important
+  }
+}
+
 .main-part .card h3{
   color: #00467f !important;
   font-size: 24px !important;

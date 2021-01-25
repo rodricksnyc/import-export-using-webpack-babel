@@ -2036,7 +2036,7 @@
 <!-- <script type="module"  src="src/index.js"></script> -->
 <script>
 
-//
+
 // $('a.ms-core-listMenu-item').on('click', function() {
 // 		$(this).closest('li.static').toggleClass('aquaBackground')
 // 		$(this).closest('li.static').find('#zz12_RootAspMenu > li > a::after').toggleClass('rotateCaret')
@@ -2047,37 +2047,47 @@
 // 		$(this).closest('li.static').toggleClass('aquaBackground')
 // 		$(this).closest('li.static').find('#zz12_RootAspMenu > li > a::after').toggleClass('rotateCaret')
 // })
-//
-// $(window).on('load', function() {
-//
-//
-// $('li.static').each(function() {
-//
-// if ($(this).children('ul').length  == 0) {
-// 	$(this).addClass('noRightCaret')
-// }
-//
-//
-// })
-//
-// })
-//
-//
-// var Opt01 = "";
-// $('.menu-item-text').each(function() {
-// 	Opt01 = $(this).html();
-//
-//
-// 	if ($(this).html() == 'Recent') {
-//
-// $(this).closest('li.static').hide()
-//
-//
-//
-//
-// 	}
-//
-// })
+
+$(window).on('load', function() {
+
+
+$('li.static').each(function() {
+
+if ($(this).children('ul').length  == 0) {
+	$(this).addClass('noRightCaret')
+}
+
+if ($(this).children('ul').length  > 0) {
+$('a.menu-item').on('click', function(e) {
+
+		$(this).closest('li.static').toggleClass('aquaBackground')
+
+})
+
+}
+
+
+
+})
+
+})
+
+
+var Opt01 = "";
+$('.menu-item-text').each(function() {
+	Opt01 = $(this).html();
+
+
+	if ($(this).html() == 'Recent') {
+
+$(this).closest('li.static').hide()
+
+
+
+
+	}
+
+})
 
 
 

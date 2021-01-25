@@ -3708,12 +3708,16 @@ margin-top:0em !important
 
 .main-part .card h3{
   color: #00467f !important;
-  font-size: 24px !important;
+  font-size: 22px !important;
   font-weight: 600;
   margin:0 !important;
   width:90%
 }
 
+
+.hoverThis:hover{
+  cursor:grab
+}
 
 .main-part .card-body {
   padding-top:.5em
@@ -6328,7 +6332,7 @@ max-width: 9em;
 
 
   /* new sharepoint edits */
-  /* footer {
+/* footer {
 
   min-height: 7rem;
 }
@@ -6396,9 +6400,7 @@ height: calc(100vh - 7vh) !important
 padding-bottom: 0px !important;
 }
 
-.row {
-margin-top: 0px;
-}
+
 
 #zz12_RootAspMenu > li > a::after {
 font-family: "Font Awesome 5 Pro" !important;
@@ -6518,8 +6520,8 @@ color:white !important;
 background: transparent !important
 }
 
-.rotateCaret{
-transform:  rotate(180deg)
+.rotateCaret:after{
+transform:rotate(180deg)
 }
 
 
@@ -6527,6 +6529,38 @@ transform:  rotate(180deg)
 #zz12_RootAspMenu{
 max-width:400px;
 }
+}
+
+#slideOut2 .close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: white;
+    text-shadow: none;
+    opacity: .5;
+    top: -1rem -1rem -1rem auto !important;
+    top: -3.5em !important;
+    position: relative;
+    right: -10px !important;
+}
+
+ li.static  {
+background: white;
+}
+
+
+li.static ul.static li.static {
+background: transparent !important;
+}
+
+li.static ul.static li.static:hover a {
+font-weight:600
+}
+
+.aquaBackground{
+  background: #EFFCFB !important
 } */
+
 
 /* end new sharepoint edits */

@@ -4444,7 +4444,8 @@ a.icon strong {
 }
 
 .dateBlock.green{
-  background: #99CD78
+  background: rgb(153,205,120);
+background: radial-gradient(circle, rgba(153,205,120,1) 19%, rgba(137,197,99,1) 100%);
 }
 
 .greenColor{
@@ -4458,7 +4459,9 @@ a.icon strong {
 }
 
 .dateBlock.blue{
-  background:#59CAEE !important
+  /* background:#59CAEE !important */
+  background: rgb(118,215,246);
+background: radial-gradient(circle, rgba(118,215,246,1) 53%, rgba(61,193,235,1) 100%);
 }
 
 .across:last-child{
@@ -4501,10 +4504,12 @@ a.icon strong {
 }
 
 .dateBlock.purple{
-  background: #D6BEEA !important
+  /* background: #D6BEEA !important */
+  background: rgb(214,190,234);
+background: radial-gradient(circle, rgba(214,190,234,1) 53%, rgba(197,162,225,1) 100%);
 }
 
-.description .pruple{
+.description .purple{
   color:#855FA5
 }
 

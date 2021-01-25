@@ -6337,7 +6337,7 @@ max-width: 9em;
 
 
   /* new sharepoint edits */
-/* footer {
+footer {
 
   min-height: 7rem;
 }
@@ -6565,7 +6565,15 @@ font-weight:600
 
 .aquaBackground{
   background: #EFFCFB !important
-} */
+}
 
+
+.noBorder{
+  border-bottom:0px !important
+}
+
+.fontZero{
+  font-size:0px !important;
+}
 
 /* end new sharepoint edits */

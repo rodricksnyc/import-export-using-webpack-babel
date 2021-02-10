@@ -503,9 +503,14 @@ $(".stickyBar .rel").focus(function(){
 	};
 });
 
-$(".stickyBar .rel .corresponding").mouseleave(function(){
-  $(this).parent().removeClass("showDiv");
+// $(".stickyBar .rel .corresponding").mouseleave(function(){
+//   $(this).parent().removeClass("showDiv");
+// })
+
+$(".stickyBar").mouseleave(function(){
+  $(this).children().removeClass("showDiv");
 })
+
 
 
 $('.collapse').on('show.bs.collapse', function () {
@@ -533,7 +538,7 @@ $('.collapse').on('hide.bs.collapse', function () {
 
 var pathMobile = window.location.href
 
-$('.side-menu-container .navbar-nav  a').each(function() {
+$('.side-menu-container .navbar-nav a').each(function() {
 	if (this.href === pathMobile) {
 		$(this).closest('li').addClass('active');
 	}
@@ -549,6 +554,27 @@ $('.side-menu-container .navbar-nav  a').each(function() {
 	}
 
 });
+
+var path = window.location.href
+
+$('.root ul.static li.static a').each(function() {
+
+	if (this.href === path) {
+		$(this).closest('li').addClass('active');
+	}
+	else {
+		$(this).closest('li').removeClass('active');
+	}
+
+	if ($('li.active').parent().parent().hasClass('static')){
+
+		$('li.active').closest('li.static').addClass('aquaBackground')
+		$('li.active').closest('.theList').show()
+
+	}
+
+
+})
 
 
 

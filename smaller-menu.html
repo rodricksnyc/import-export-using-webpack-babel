@@ -804,7 +804,7 @@
 				<p class="darkBlue">Feedback</p>
 
 			</div>
-			<div id="two" class="openTab bottomShadow" data-dismiss="modal" data-toggle="tab" aria-controls="right-nav-contact" aria-selected="false" tabindex="0">
+			<div id="two" class="openTab bottomShadow" role="button" tabindex="0" aria-label="Contact">
 				<i class="fal fa-user-headset white mb-3 mt-2"></i>
 				<p class="darkBlue">Support</p>
 			</div>
@@ -1085,6 +1085,7 @@
 					<li class="tealFont">Remote User Access Request&nbsp;<i class="fal fa-file-pdf"></i></li>
 					<li class="tealFont">Pledge of Confidentiality of Survey Data (Assurance Statement)&nbsp;<i class="fal fa-file-pdf"></i></li>
 					<li class="tealFont">Business Size Self-Certification Form&nbsp;<i class="fal fa-file-pdf"></i></li>
+					<li class="tealFont">Photograph Preference Form&nbsp;<i class="fal fa-file-pdf"></i></li>
 				</ul>
 
 				<p class="tealFont text-center">See All</p>
@@ -1114,6 +1115,7 @@
 									<div class="carousel-item-overlay">
 										<p class="white strong">Check Out the New Transition Guide</p>
 										<p class="white">WesInfo has a new look and layout! Take a tour of the new design, and discover where all of your favorite tools and resources now live.</p>
+	<span class="white" style="font-weight:400;font-size:15px;position:absolute;bottom:10px; right:20px">Go	<i class="fal fa-arrow-right white" style="font-weight:300;font-size:15px;"></i></span>
 
 									</div>
 
@@ -1126,7 +1128,7 @@
 									<div class="carousel-item-overlay">
 										<p class="white strong">Check Out the New Transition Guide</p>
 										<p class="white">WesInfo has a new look and layout! Take a tour of the new design, and discover where all of your favorite tools and resources now live.</p>
-
+										<span class="white" style="font-weight:400;font-size:15px;position:absolute;bottom:10px; right:20px">Go	<i class="fal fa-arrow-right white" style="font-weight:300;font-size:15px;"></i></span>
 									</div>
 
 								</div>
@@ -1138,7 +1140,7 @@
 									<div class="carousel-item-overlay">
 										<p class="white strong">Check Out the New Transition Guide</p>
 										<p class="white">WesInfo has a new look and layout! Take a tour of the new design, and discover where all of your favorite tools and resources now live.</p>
-
+			<span class="white" style="font-weight:400;font-size:15px;position:absolute;bottom:10px; right:20px">Go	<i class="fal fa-arrow-right white" style="font-weight:300;font-size:15px;"></i></span>
 									</div>
 
 								</div>
@@ -1150,7 +1152,7 @@
 									<div class="carousel-item-overlay">
 										<p class="white strong">Check Out the New Transition Guide</p>
 										<p class="white">WesInfo has a new look and layout! Take a tour of the new design, and discover where all of your favorite tools and resources now live.</p>
-
+						<span class="white" style="font-weight:400;font-size:15px;position:absolute;bottom:10px; right:20px">Go	<i class="fal fa-arrow-right white" style="font-weight:300;font-size:15px;"></i></span>
 									</div>
 
 								</div>
@@ -1729,9 +1731,9 @@
 
 
 
-</div>
+<!-- </div>
 
-<div class="toggleDiv popularR row">
+<div class="toggleDiv popularR row"> -->
 	<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
 		<a href="">
 			<div class="smallBubble d-flex flex-column align-items-center">
@@ -2135,13 +2137,13 @@
 	<p class="darkBlue bold">Cafe Hours</p>
 	<div class="d-flex justify-content-start cafe">
 		<div class="d-flex flex-column align-items-start mr-5">
-			<p class="smaller">Breakfast<br> 8:00-10:00 a.m.</p>
-				<p class="smaller">RB Deli<br/>7:30–2:00 p.m</p>
+			<p class="smaller addMore">Breakfast<br> 8:00-10:00 a.m.</p>
+			<p class="smaller">RB Deli<br>7:30–2:00 p.m</p>
 
 		</div>
 
 		<div class="d-flex flex-column align-items-start">
-			<p class="smaller">Lunch <br>11:00–2:00 p.m.</p>
+			<p class="smaller addMore">Lunch <br>11:00–2:00 p.m.</p>
 
 
 			<p class="smaller viewMenu">View Menu:</p>
@@ -2159,6 +2161,8 @@
 </div>
 
 </div>
+
+
 
 
 
@@ -2240,6 +2244,38 @@
 <!-- <script type="text/javascript"  src="src/index.js"></script> -->
 
 <script>
+
+
+var lastBubbles = $('.row.popularR.firstRow .col-lg-2:eq( 10 ), .row.popularR.firstRow .col-lg-2:eq( 11 ), .row.popularR.firstRow .col-lg-2:eq( 12 ), .row.popularR.firstRow .col-lg-2:eq( 13 ), .row.popularR.firstRow .col-lg-2:eq( 14 )').hide()
+
+
+
+
+var slideIt2 = function() {
+
+
+
+
+if($(lastBubbles).hasClass('showing'))  {
+
+	$('.viewMore').html('View More')
+	$(lastBubbles).slideUp().removeClass('showing')
+}
+else if (!$(lastBubbles).hasClass('showing')){
+
+$('.viewMore').html('View Less')
+
+	$(lastBubbles).slideDown().addClass('showing')
+
+
+}
+}
+$('.viewMore').keypress(
+slideIt2
+).click(
+slideIt2
+);
+
 
 
 </script>

@@ -13,6 +13,12 @@
 	<link rel="stylesheet" href="vendorlibs/normalize.min.css">
 
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+
+
+
+
+<!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
 </head>
 <body>
 
@@ -1489,17 +1495,20 @@
 
 </div>
 
+
+
+
 	<div class="contactUsOverlay"></div>
-	<div class="rel outer" id="outer">
+
 		<div class="stickyBar">
 			<div class="rel">
 				<div class="corresponding">
-					<div class="directory">
-						<form>
-							<legend>
-								<p>411 Directory Staff</p>
+					<div class="directory">	<p>411 Directory Staff</p>
+						<!-- <form> -->
+							<!-- <legend>
+
 							</p>
-						</legend>
+						</legend> -->
 						<div class="form-group">
 
 							<label for="lastName">Last Name</label>
@@ -1508,15 +1517,20 @@
 						</div>
 
 						<div class="form-group">
-							<label for="firstName">First Name</label>
+
+					 <label for="firstName">First Name</label>
 							<input type="text" class="form-control" id="firstName" aria-label="searchFirstName" placeholder="">
 
 						</div>
 						<div class="horizontal mt1">
-							<a class="advancedSearch tealFont" href="">Advanced</a>
-							<a class="search tealBubble smallerBubble" href="">Search</a>
-						</div>
-					</form>
+		              <a class="advancedSearch tealFont" data-toggle="modal" data-target="#modal411" type="button">Advanced</a>
+
+
+		              <a type="button" class="searchPeople tealBubble smallerBubble" data-toggle="modal" data-target="#searchResultsModal">Search</a>
+
+		              <!--  -->
+		            </div>
+					<!-- </form> -->
 				</div>
 			</div>
 			<img src="images/Group-1.svg">
@@ -1586,7 +1600,7 @@
 			<div class="col-lg-2 col-md-12 col-sm-12 leftSideNav">
 
 
-	 <!-- <ul id="zz12_RootAspMenu" class="root ms-core-listMenu-root static">
+	 <ul id="zz12_RootAspMenu" class="root ms-core-listMenu-root static">
 			<li class="static">
 				<a class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="/OAsys/Pages/office-automation.aspx">
 					<span class="additional-background ms-navedit-flyoutArrow">
@@ -1662,7 +1676,7 @@
 						</span>
 					</a>
 				</li>
-				<li class="static selected">
+				<li class="static">
 					<a class="static selected menu-item ms-core-listMenu-item ms-displayInline ms-core-listMenu-selected ms-navedit-linkNode" href="/OAsys">
 						<span class="additional-background ms-navedit-flyoutArrow">
 							<span class="menu-item-text">Remote User Access Service</span>
@@ -1688,7 +1702,7 @@
 				</li>
 			</ul>
 		</li>
-		</ul> -->
+		</ul>
 
 				<div class="position-relative">
 				<div class="side-menu-container">
@@ -1715,20 +1729,6 @@
 										<li><a href="#">User</a></li>
 										<li><a href="#">Social</a></li>
 
-										<!-- <li class="panel panel-default">
-											<a data-toggle="collapse" href="#dropdown-sub1">
-												<i class="glyphicon glyphicon-off"></i> Sub Level <span class="caret"></span>
-											</a>
-											<div id="dropdown-sub1" class="panel-collapse collapse">
-												<div class="panel-body">
-													<ul class="nav navbar-nav">
-														<li><a href="#">Link</a></li>
-														<li><a href="#">Link</a></li>
-														<li><a href="#">Link</a></li>
-													</ul>
-												</div>
-											</div>
-										</li> -->
 									</ul>
 								</div>
 							</div>
@@ -1980,6 +1980,12 @@
 
 </div>
 
+
+<!--
+<input id="movie" type="text" />
+	<br>
+	<div class="button">Click for Movies</div> -->
+
 <footer>
 	<div class="footer-wrapper">
 		<div class="d-flex justify-content-start align-items-center">
@@ -2037,58 +2043,53 @@
 <script>
 
 
-// $('a.ms-core-listMenu-item').on('click', function() {
-// 		$(this).closest('li.static').toggleClass('aquaBackground')
-// 		$(this).closest('li.static').find('#zz12_RootAspMenu > li > a::after').toggleClass('rotateCaret')
-// })
-
-// $('a.menu-item').on('click', function(e) {
-//
-// 		$(this).closest('li.static').toggleClass('aquaBackground')
-// 		$(this).closest('li.static').find('#zz12_RootAspMenu > li > a::after').toggleClass('rotateCaret')
-// })
-
-$(window).on('load', function() {
-
-
-$('li.static').each(function() {
-
-if ($(this).children('ul').length  == 0) {
-	$(this).addClass('noRightCaret')
-}
-
-if ($(this).children('ul').length  > 0) {
-$('a.menu-item').on('click', function(e) {
-
-		$(this).closest('li.static').toggleClass('aquaBackground')
-
-})
-
-}
+	//
+  // let firstName = $('#first411').val();
+	//
+	// let lastName = $('#last411').val();
+	//
+	//  let theLink = `<iframe src="http://wesinfoadmin/version4/new_four11/four11_staff.cfm?lastname=${lastName}&firstname=${firstName}" style="width: 100%;height:auto;min-height: 100vh;"></iframe>`
+	//
+	// $('.searchPeople').click(function() {
+	// 	$('.appendIframe').append(theLink)
+	// })
 
 
 
-})
-
-})
-
-
-var Opt01 = "";
-$('.menu-item-text').each(function() {
-	Opt01 = $(this).html();
-
-
-	if ($(this).html() == 'Recent') {
-
-$(this).closest('li.static').hide()
-
-
-
-
-	}
-
-})
-
+		//
+		// $('.searchPeople').click(function() {
+		//
+		// 	let theFrame = `<iframe src="https://isweb16.westat.com/version4/four11_staff.cfm?lastname=${lastName}&firstname=${firstName}" style="width: 100%;height:auto;min-height: 100vh;"></iframe>`
+		//
+		//
+		//
+		//
+		// 	var firstName = $('#firstName').val();
+		//
+		// 	var lastName = $('#lastName').val();
+		//
+		//
+		// 	new_four11/four11_staff.cfm?lastname=&firstname=Elizabeth
+		//
+		//
+	  //  new_four11/four11_staff.cfm?lastname=Rodricks&firstname=Elizabeth
+		//
+		//
+		//
+		//
+		// var theFrame = $('<iframe style="width: 100%;height:auto;min-height: 100vh;" src="https://isweb16.westat.com/version4/new_four11/four11_staff.cfm?lastname=' + lastName + '&firstname=' + firstName + '"></iframe>');
+		// $('.appendIframe').append(theFrame);
+		//
+		//
+		//
+		// $('.closeIframe').click(function() {
+		// 	(theFrame).remove()
+		// })
+		//
+		// // $('.appendIframe').append('<iframe style="width: 100%;height:auto;min-height: 100vh;" src="http://wesinfoadmin/version4/new_four11/four11_staff.cfm?lastname=  ' + lastName + '  &firstname= ' + firstName + '</iframe>');
+		//
+		//
+		// })
 
 
 
